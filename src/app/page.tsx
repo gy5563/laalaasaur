@@ -26,7 +26,7 @@ const Main = () => {
     const portfolio = portfolioText.current;
     const showcase = showcaseText.current;
 
-    let tl = gsap.timeline({delay: 0.3});
+    const tl = gsap.timeline({delay: 0.3});
     tl.fromTo(heading1, { opacity: 0, scale: 0.8, rotateX: -90, }, { transformOrigin: "center bottom -10px", opacity: 1, scale: 1, rotateX: 0, duration: 1, ease: 'power4.out' }, )
       .fromTo(heading2, { opacity: 0, scale: 0.8, rotateX: -90, }, { transformOrigin: "center bottom -10px", opacity: 1, scale: 1, rotateX: 0, duration: 1, ease: 'power4.out' }, "-=0.7")
       .fromTo(my, { opacity: 0, scale: 0.9, rotateX: -90, }, { transformOrigin: "center bottom -30px", opacity: 1, scale: 1, rotateX: 0, duration: 1, ease: 'power4.out' }, "-=0.7")
@@ -85,7 +85,7 @@ const Main = () => {
             </div>
           </div>
           <h1 ref={headingOne} className='z-100 lg:text-9xl md:text-6xl sm:text-3xl font-jost font-normal text-amber-50 mix-blend-difference transform-3d'>hello</h1>
-          <h1 ref={headingTwo} className='z-100 lg:text-9xl md:text-6xl sm:text-3xl font-jost font-normal text-amber-50 mix-blend-difference transform-3d'>I'm Laalaasaur</h1>
+          <h1 ref={headingTwo} className='z-100 lg:text-9xl md:text-6xl sm:text-3xl font-jost font-normal text-amber-50 mix-blend-difference transform-3d'>I&apos;m Laalaasaur</h1>
       </section>
       <section>
         <h1>The work I did, and the people I helped.</h1>
