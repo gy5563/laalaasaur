@@ -1,0 +1,55 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Savate:wght@200..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-savate: "Savate", sans-serif;
+  --font-jost: "Jost", sans-serif;
+}
+
+body {
+  height: 300vh;
+  cursor: none;
+}
+
+.custom-cursor,
+.custom-cursor-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+.custom-cursor-outer {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(139, 139, 139, 0.4);
+  border-radius: 50%;
+}
+
+.comparisonContainer {
+  position: relative;
+  height: 100vh;
+  
+}
+
+.comparisonSection {
+  width: 100%;
+  height: 100%;
+}
+
+.after {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  transform: translate(100%, 0px);
+}
