@@ -12,28 +12,31 @@ body {
   cursor: none;
 }
 
-.custom-cursor,
-.custom-cursor-outer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-}
 
-.custom-cursor {
-  width: 20px;
-  height: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-}
+@media only screen and (min-width: 768px) {
+  .custom-cursor,
+  .custom-cursor-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+  }
 
-.custom-cursor-outer {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(139, 139, 139, 0.4);
-  border-radius: 50%;
+  .custom-cursor {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+  }
+
+  .custom-cursor-outer {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(139, 139, 139, 0.4);
+    border-radius: 50%;
+  }
 }
 
 .comparisonContainer {
