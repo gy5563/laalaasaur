@@ -1,7 +1,7 @@
 import './globals.css';
 import { ReactNode } from 'react';
-import CustomCursor from './cursor';
-import Navbar from './navbar';
+import CustomCursor from './components/cursor';
+import Navbar from './components/navbar';
 
 export const metadata = {
     title: 'Laalaa Portfolio',

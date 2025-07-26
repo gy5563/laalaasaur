@@ -1,63 +1,61 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-
-gsap.registerPlugin(ScrollTrigger);
+import { animateHero } from './animations/gsapAnimation';
+import InfiniteMarquee from './test'
 
 const Main = () => {
+  //Hero section
   const sectionRef = useRef<HTMLDivElement>(null);
   const topLayerRef = useRef<HTMLDivElement>(null);
-  const headingOne = useRef<HTMLHeadingElement>(null);
-  const headingTwo = useRef<HTMLHeadingElement>(null);
+  const heading1 = useRef<HTMLHeadingElement>(null);
+  const heading2 = useRef<HTMLHeadingElement>(null);
   const paragraphOne = useRef<HTMLHeadingElement>(null);
   const myText = useRef<HTMLHeadingElement>(null);
   const portfolioText = useRef<HTMLHeadingElement>(null);
   const showcaseText = useRef<HTMLHeadingElement>(null);
+  //Gallery
+  const gallery1 = useRef<HTMLHeadingElement>(null);
+  const gallery2 = useRef<HTMLHeadingElement>(null);
+  const gallery3 = useRef<HTMLHeadingElement>(null);
+  const gallery4 = useRef<HTMLHeadingElement>(null);
+  const gallery5 = useRef<HTMLHeadingElement>(null);
 
   useGSAP(() => {
-    const section = sectionRef.current;
-    const topLayer = topLayerRef.current;
-    const heading1 = headingOne.current;
-    const heading2 = headingTwo.current;
-    const my = myText.current;
-    const portfolio = portfolioText.current;
-    const showcase = showcaseText.current;
-
-    const tl = gsap.timeline({delay: 0.3});
-    tl.fromTo(heading1, { opacity: 0, scale: 0.8, rotateX: -90, }, { transformOrigin: "center bottom -10px", opacity: 1, scale: 1, rotateX: 0, duration: 1, ease: 'power4.out' }, )
-      .fromTo(heading2, { opacity: 0, scale: 0.8, rotateX: -90, }, { transformOrigin: "center bottom -10px", opacity: 1, scale: 1, rotateX: 0, duration: 1, ease: 'power4.out' }, "-=0.7")
-      .fromTo(my, { opacity: 0, scale: 0.9, rotateX: -90, }, { transformOrigin: "center bottom -30px", opacity: 1, scale: 1, rotateX: 0, duration: 1, ease: 'power4.out' }, "-=0.7")
-      .fromTo(portfolio, { opacity: 0, scale: 0.9, rotateX: -90, }, { transformOrigin: "center bottom -30px", opacity: 1, scale: 1, rotateX: 0, duration: 1, ease: 'power4.out' }, "-=0.7")
-      .fromTo(showcase, { opacity: 0, scale: 0.9, rotateX: -90, }, { transformOrigin: "center bottom -30px", opacity: 1, scale: 1, rotateX: 0, duration: 1, ease: 'power4.out' }, "-=0.7");
-
-
-    if (!section || !topLayer) return;
-
-    gsap.to(topLayer, {
-      clipPath: 'inset(0% 0% 0% 100%)', // Reveal from right to left
-      scrollTrigger: {
-        trigger: section,
-        start: 'top top',
-        end: () => `+=${section.offsetWidth}`,
-        scrub: true,
-        pin: true,
-        anticipatePin: 1,
-      },
-      ease: 'none',
-    });
-
-    gsap.to(heading1,{
-      xPercent: -50,
-      scrollTrigger: {
-        trigger: topLayer,
-        start: 'top top',
-        end: () => `+=${topLayer.offsetWidth}`,
-        scrub: true,
-      }
-    })
+    if (
+      sectionRef.current &&
+      topLayerRef.current &&
+      heading1.current &&
+      heading2.current &&
+      myText.current &&
+      portfolioText.current &&
+      showcaseText.current &&
+      paragraphOne.current &&
+      gallery1.current &&
+      gallery2.current &&
+      gallery3.current &&
+      gallery4.current &&
+      gallery5.current
+    ) {
+      animateHero({
+        //Hero section
+        section: sectionRef.current,
+        topLayer: topLayerRef.current,
+        headingOne: heading1.current,
+        headingTwo: heading2.current,
+        myText: myText.current,
+        portfolioText: portfolioText.current,
+        showcaseText: showcaseText.current,
+        paragraphOne: paragraphOne.current,
+        //Gallery
+        galleryOne: gallery1.current,
+        galleryTwo: gallery2.current,
+        galleryThree: gallery3.current,
+        galleryFour: gallery4.current,
+        galleryFive: gallery5.current,
+      });
+    }
   }, []);
 
   return (
@@ -78,28 +76,61 @@ const Main = () => {
               clipPath: 'inset(0% 0% 0% 0%)', // fully visible at start
             }}
           >
-            <div className='perspective-[400px] flex flex-col'>
-              <span ref={myText} className='font-jost font-normal transform-3d text-8xl'>My</span>
-              <span ref={portfolioText} className='font-jost font-normal transform-3d text-8xl'>Portfolio</span>
-              <span ref={showcaseText} className='font-jost font-normal transform-3d text-8xl'>Showcase</span>
+            <div className='perspective-[400px] flex flex-col -translate-y-1/4 translate-x-1/4'>
+              <span ref={myText} className='text-[clamp(24px,8vw,72px)] font-jost font-normal transform-3d text-8xl'>My</span>
+              <span ref={portfolioText} className='text-[clamp(24px,8vw,72px)] font-jost font-normal transform-3d text-8xl'>Portfolio</span>
+              <span ref={showcaseText} className='text-[clamp(24px,8vw,72px)] font-jost font-normal transform-3d text-8xl'>Showcase</span>
             </div>
           </div>
-          <h1 ref={headingOne} className='z-100 lg:text-9xl md:text-6xl sm:text-3xl font-jost font-normal text-amber-50 mix-blend-difference transform-3d'>hello</h1>
-          <h1 ref={headingTwo} className='z-100 lg:text-9xl md:text-6xl sm:text-3xl font-jost font-normal text-amber-50 mix-blend-difference transform-3d'>I&apos;m Laalaasaur</h1>
+          <h1 ref={heading1} className='z-100 text-[clamp(36px,12vw,160px)] font-jost font-normal text-amber-50 mix-blend-difference transform-3d'>hello</h1>
+          <h1 ref={heading2} className='z-100 text-[clamp(36px,12vw,160px)] font-jost font-normal text-amber-50 mix-blend-difference transform-3d'>I&apos;m Laalaasaur</h1>
       </section>
-      <section>
-        <h1>The work I did, and the people I helped.</h1>
-        <div className='grid grid-cols-3 grid-rows-3 gap-4 px-24'>
-            <div className='bg-black h-72'></div>
-            <div className='bg-black h-72'></div>
-            <div className='bg-black h-72'></div>
-            <div className='bg-black h-72'></div>
-            <div className='bg-black h-72'></div>
-            <div className='bg-black h-72'></div>
-            <div className='bg-black h-72'></div>
-            <div className='bg-black h-72'></div>
-            <div className='bg-black h-72'></div>
+      <section className='px-[8%]'>
+        <div className='mt-6 w-[900px]'>
+          <h1 className='text-[clamp(24px,8vw,72px)] font-jost font-normal transform-3d text-8xl'>The work I did, and the people I helped.</h1>
         </div>
+        <div className='mt-6 flex justify-center'>
+          <div className='flex flex-col basis-1/2'>
+            <div ref={gallery1} className='clip-path'>
+              <img
+                src='https://picsum.photos/id/231/200/300'
+                alt='Random'
+                className='w-full h-[200px] object-cover'
+              />
+            </div>
+            <div ref={gallery2} className='clip-path'>
+              <img
+                src='https://picsum.photos/id/5/200/300'
+                alt='Random'
+                className='w-full h-[200px] object-cover'
+              />
+            </div>
+            <div ref={gallery3} className='clip-path'>
+              <img
+                src='https://picsum.photos/id/237/200/300'
+                alt='Random'
+                className='w-full h-[600px] object-cover'
+              />
+            </div>
+          </div>
+          <div className='flex flex-col basis-1/2'>
+            <div ref={gallery4} className='clip-path'>
+              <img
+                src='https://picsum.photos/id/123/200/300'
+                alt='Random'
+                className='w-full h-[400px] object-cover'
+              />
+            </div>
+            <div ref={gallery5} className='clip-path'>
+              <img
+                src='https://picsum.photos/id/66/200/300'
+                alt='Random'
+                className='w-full h-[200px] object-cover'
+              />
+            </div>
+          </div>
+        </div>
+        <InfiniteMarquee />
       </section>
     </>
 

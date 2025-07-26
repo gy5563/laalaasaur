@@ -12,6 +12,10 @@ body {
   cursor: none;
 }
 
+.container {
+  padding: 3rem 1em;
+}
+
 
 @media only screen and (min-width: 768px) {
   .custom-cursor,
@@ -55,4 +59,8 @@ body {
   overflow: hidden;
   top: 0;
   transform: translate(100%, 0px);
+}
+
+.clip-path {
+  clip-path: inset(0% 0% 100% 0%);
 }
