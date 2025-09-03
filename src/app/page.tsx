@@ -18,7 +18,6 @@ const Main = () => {
   const topLayerRef = useRef<HTMLDivElement>(null);
   const heading1 = useRef<HTMLHeadingElement>(null);
   const heading2 = useRef<HTMLHeadingElement>(null);
-  const paragraphOne = useRef<HTMLHeadingElement>(null);
   const myText = useRef<HTMLHeadingElement>(null);
   const myEmail = useRef<HTMLHeadingElement>(null);
   const portfolioText = useRef<HTMLHeadingElement>(null);
@@ -42,7 +41,6 @@ const Main = () => {
       showcaseText.current &&
       contactText.current &&
       myEmail.current &&
-      paragraphOne.current &&
       gallery1.current &&
       gallery2.current &&
       gallery3.current 
@@ -58,7 +56,6 @@ const Main = () => {
         showcaseText: showcaseText.current,
         contactText: contactText.current,
         myEmail: myEmail.current,
-        paragraphOne: paragraphOne.current,
         //Gallery
         galleryOne: gallery1.current,
         galleryTwo: gallery2.current,
@@ -81,7 +78,7 @@ const Main = () => {
           {/* Bottom layer (revealed) */}
           <div className="absolute px-2 sm:px-6 md:px-24 py-8 inset-0 bg-linear-to-t from-neutral-900 to-black font-manrope font-light text-white flex items-end z-10">
             <div className='basis-1/2'>
-              <p ref={paragraphOne} className='text-[clamp(20px,4vw,32px)]'>Hi! Welcome to my portfolio showcase, I am Guang Yang, a web dev enthusiatic, specialized in front-end development. Currently open for work 😍</p>
+              <p className='text-[clamp(20px,4vw,32px)]'>Hi! Welcome to my portfolio showcase, I am Guang Yang, a web dev enthusiatic, specialized in front-end development. Currently open for work 😍</p>
             </div>
             <div className='basis-1/2 '>
                 <a

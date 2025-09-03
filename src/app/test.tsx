@@ -9,7 +9,7 @@ export default function Home() {
   const secondText = useRef<HTMLDivElement>(null);
   const slider = useRef(null);
   let xPercent = 0;
-  let direction = 1;
+  const direction = 1;
 
 useEffect( () => {
   if (firstText.current && secondText.current) {

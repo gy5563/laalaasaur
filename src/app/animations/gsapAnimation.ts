@@ -27,7 +27,6 @@ export function animateHero({
   showcaseText: HTMLElement;
   contactText: HTMLElement;
   myEmail: HTMLElement;
-  paragraphOne: HTMLElement;
   galleryOne: HTMLElement;
   galleryTwo: HTMLElement;
   galleryThree: HTMLElement;
