@@ -34,13 +34,9 @@ const animate = () => {
 
   return (
     <main className={styles.main}>
-      <img 
-        src="/images/after.png"
-        alt="background"
-      />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
-          <p ref={firstText}>hello hello hello</p>
+          <p ref={firstText}>hello hello hello hello</p>
           <p ref={secondText}></p>
         </div>
       </div>

@@ -12,12 +12,11 @@ export function animateHero({
   myText,
   portfolioText,
   showcaseText,
-  paragraphOne,
+  contactText,
+  myEmail,
   galleryOne,
   galleryTwo,
   galleryThree,
-  galleryFour,
-  galleryFive,
 }: {
   section: HTMLElement;
   topLayer: HTMLElement;
@@ -26,80 +25,105 @@ export function animateHero({
   myText: HTMLElement;
   portfolioText: HTMLElement;
   showcaseText: HTMLElement;
+  contactText: HTMLElement;
+  myEmail: HTMLElement;
   paragraphOne: HTMLElement;
   galleryOne: HTMLElement;
   galleryTwo: HTMLElement;
   galleryThree: HTMLElement;
-  galleryFour: HTMLElement;
-  galleryFive: HTMLElement;
 }) {
   const tl = gsap.timeline({ delay: 0.3 });
 
   tl.fromTo(
     headingOne,
-    { opacity: 0, scale: 0.75, rotateX: -90 },
+    { opacity: 0, scale: 0.75, rotateX: -75 },
     {
       transformOrigin: 'center bottom -10px',
       opacity: 1,
       scale: 1,
       rotateX: 0,
-      duration: 1,
+      duration: 1.4,
       ease: 'power4.out',
     }
   )
     .fromTo(
       headingTwo,
-      { opacity: 0, scale: 0.75, rotateX: -90 },
+      { opacity: 0, scale: 0.75, rotateX: -75 },
       {
         transformOrigin: 'center bottom -10px',
         opacity: 1,
         scale: 1,
         rotateX: 0,
-        duration: 1,
+        duration: 1.4,
         ease: 'power4.out',
       },
-      '-=0.7'
+      '-=1.2'
     )
     .fromTo(
       myText,
-      { opacity: 0, scale: 0.75, rotateX: -90 },
+      { opacity: 0, scale: 0.85, rotateX: -90 },
       {
-        transformOrigin: 'center bottom -30px',
+        transformOrigin: 'center bottom -20px',
         opacity: 1,
         scale: 1,
         rotateX: 0,
-        duration: 1,
+        duration: 1.4,
         ease: 'power4.out',
       },
-      '-=0.7'
+      '-=1.2'
     )
     .fromTo(
       portfolioText,
-      { opacity: 0, scale: 0.75, rotateX: -90 },
+      { opacity: 0, scale: 0.85, rotateX: -90 },
       {
-        transformOrigin: 'center bottom -30px',
+        transformOrigin: 'center bottom -20px',
         opacity: 1,
         scale: 1,
         rotateX: 0,
-        duration: 1,
+        duration: 1.4,
         ease: 'power4.out',
       },
-      '-=0.7'
+      '-=1.2'
     )
     .fromTo(
       showcaseText,
-      { opacity: 0, scale: 0.75, rotateX: -90 },
+      { opacity: 0, scale: 0.85, rotateX: -90 },
       {
-        transformOrigin: 'center bottom -30px',
+        transformOrigin: 'center bottom -20px',
         opacity: 1,
         scale: 1,
         rotateX: 0,
-        duration: 1,
+        duration: 1.4,
         ease: 'power4.out',
       },
-      '-=0.7'
+      '-=1.2'
+    )
+    .fromTo(
+      contactText,
+      { opacity: 0, scale: 0.85, rotateX: -90 },
+      {
+        transformOrigin: 'center bottom -20px',
+        opacity: 1,
+        scale: 1,
+        rotateX: 0,
+        duration: 1.4,
+        ease: 'power4.out',
+      },
+      '-=1.2'
+    )
+    .fromTo(
+      myEmail,
+      { opacity: 0, scale: 0.85, rotateX: -90 },
+      {
+        transformOrigin: 'center bottom -20px',
+        opacity: 1,
+        scale: 1,
+        rotateX: 0,
+        duration: 1.4,
+        ease: 'power4.out',
+      },
+      '-=1.2'
     );
-
   gsap.to(topLayer, {
     clipPath: 'inset(0% 0% 0% 100%)',
     scrollTrigger: {
@@ -114,7 +138,17 @@ export function animateHero({
   });
 
   gsap.to(headingOne, {
-    xPercent: -50,
+    xPercent: 50,
+    scrollTrigger: {
+      trigger: topLayer,
+      start: 'top top',
+      end: () => `+=${topLayer.offsetWidth}`,
+      scrub: true,
+    },
+  });
+
+  gsap.to(headingTwo, {
+    xPercent: -180,
     scrollTrigger: {
       trigger: topLayer,
       start: 'top top',
@@ -150,26 +184,6 @@ export function animateHero({
     ease: "power2.out",
     scrollTrigger: {
       trigger: galleryThree,
-      start: 'center bottom',
-    },
-  });
-
-  gsap.to(galleryFour, {
-    clipPath: "inset(0% 0% 0% 0%)",
-    duration: 1.5,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: galleryFour,
-      start: 'center bottom',
-    },
-  });
-
-  gsap.to(galleryFive, {
-    clipPath: "inset(0% 0% 0% 0%)",
-    duration: 1.5,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: galleryFive,
       start: 'center bottom',
     },
   });

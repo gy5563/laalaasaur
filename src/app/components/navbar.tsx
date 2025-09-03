@@ -65,15 +65,15 @@ const Navbar = () => {
   return (
     <div
       ref={navbarRef}
-      className="fixed top-0 left-0 w-full z-50 text-black px-6 py-4 bg-gradient-to-t from-transparent to-white"
+      className="fixed top-0 left-0 w-full z-50 text-black py-4 px-2 sm:px-6 md:px-24 bg-gradient-to-b from-[#ffffffe8] from-[0%] via-[#ffffff6c] via-[65%] to-transparent to-[100%]"
       style={{ transform: 'translateY(0)', opacity: 1 }}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="text-2xl font-jost font-normal">Logo</div>
-        <ul className="flex gap-6 text-xl font-jost font-normal">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+      <div className="mx-auto flex justify-between items-center">
+        <span className='font-manrope font-bold text-[clamp(12px,4vw,32px)]'>GuangY.</span>
+        <ul className="navbar flex gap-8 text-[clamp(12px,4vw,20px)] font-manrope font-normal">
+          <li className='menu'>Home</li>
+          <li className='menu'>About</li>
+          <li className='menu'>Contact</li>
         </ul>
       </div>
     </div>
