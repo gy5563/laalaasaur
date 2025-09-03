@@ -4,15 +4,11 @@ import React, { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { animateHero } from './animations/gsapAnimation';
 import InfiniteMarquee from './test'
-import { ReactLenis, useLenis } from 'lenis/react'
+import { ReactLenis } from 'lenis/react'
 import { MdOutlineArrowOutward } from 'react-icons/md';
 import { FaAsterisk } from "react-icons/fa";
 
 const Main = () => {
-  const lenis = useLenis((lenis) => {
-    // called every scroll
-    console.log(lenis)
-  })
   //Hero section
   const sectionRef = useRef<HTMLDivElement>(null);
   const topLayerRef = useRef<HTMLDivElement>(null);
@@ -27,8 +23,6 @@ const Main = () => {
   const gallery1 = useRef<HTMLHeadingElement>(null);
   const gallery2 = useRef<HTMLHeadingElement>(null);
   const gallery3 = useRef<HTMLHeadingElement>(null);
-  const gallery4 = useRef<HTMLHeadingElement>(null);
-  const gallery5 = useRef<HTMLHeadingElement>(null);
 
   useGSAP(() => {
     if (
@@ -73,7 +67,7 @@ const Main = () => {
       >
         <div className='container'>
           <h1 ref={heading1} className='perspective-h1 relative z-200 text-[clamp(36px,20vw,240px)] leading-none font-manrope font-bold text-amber-50 mix-blend-difference transform-3d'>Hello</h1>
-          <h1 ref={heading2} className='perspective-h1 relative z-200 text-[clamp(36px,20vw,240px)] leading-none font-manrope font-bold text-amber-50 mix-blend-difference transform-3d'>I'm Guang</h1>
+          <h1 ref={heading2} className='perspective-h1 relative z-200 text-[clamp(36px,20vw,240px)] leading-none font-manrope font-bold text-amber-50 mix-blend-difference transform-3d'>I&apos;m Guang</h1>
 
           {/* Bottom layer (revealed) */}
           <div className="absolute px-2 sm:px-6 md:px-24 py-8 inset-0 bg-linear-to-t from-neutral-900 to-black font-manrope font-light text-white flex items-end z-10">
@@ -222,7 +216,7 @@ const Main = () => {
                 style={{ letterSpacing: "2px" }}
               >
                 <textPath href="#circlePath" startOffset="50%">
-                  I'd like to say hi, drop me a message
+                  I would like to say hi, drop me a message
                 </textPath>
               </text>
             </svg>
