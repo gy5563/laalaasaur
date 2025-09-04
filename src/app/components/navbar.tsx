@@ -72,7 +72,7 @@ const Navbar = () => {
       <div className="mx-auto flex justify-between items-center">
         <a href="#"><span className='font-manrope font-medium text-[clamp(12px,4vw,32px)]'>GuangY.</span></a>
         <ul className="navbar flex text-[clamp(12px,4vw,32px)] font-manrope font-medium">
-          <a href=""><li className='menu flex items-center gap-1'>Let's Talk<IoMdArrowForward /></li></a>
+          <a href=""><li className='menu flex items-center gap-1'>Let&apos;s Talk<IoMdArrowForward /></li></a>
         </ul>
       </div>
     </div>
