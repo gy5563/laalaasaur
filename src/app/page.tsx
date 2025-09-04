@@ -72,7 +72,7 @@ const Main = () => {
           {/* Bottom layer (revealed) */}
           <div className="absolute px-2 sm:px-6 md:px-24 py-8 inset-0 bg-linear-to-t from-neutral-900 to-black font-manrope font-light text-white flex items-end z-10">
             <div className='basis-1/2'>
-              <p className='text-[clamp(20px,4vw,32px)]'>Hi! Welcome to my portfolio showcase, I am Guang Yang, a web dev enthusiatic, specialized in front-end development. Currently open for work 😍</p>
+              <p className='text-[clamp(20px,4vw,32px)]'>Hi! Welcome to my portfolio showcase, I am Guang Yang, a web dev enthusiatic, specialized in front-end development. Currently discovering full stacks development, stay around for more projects upload!</p>
             </div>
             <div className='basis-1/2 '>
                 <a
@@ -101,7 +101,7 @@ const Main = () => {
               <span ref={showcaseText} className='text-[clamp(20px,4vw,36px)] leading-[1] font-manrope font-normal transform-3d'>/Web Animator</span>
             </div>
             <div className='perspective-[400px] flex flex-col font-manrope'>
-              <span ref={contactText} className='flex items-center text-[clamp(20px,4vw,24px)] font-bold'><MdOutlineArrowOutward className='arrow text-[24px] font-black' />Contact Me</span>
+              <span ref={contactText} className='flex items-center text-[clamp(20px,4vw,28px)] font-normal'><MdOutlineArrowOutward className='arrow text-[24px]' />Contact Me</span>
               <span ref={myEmail} className='email text-[clamp(20px,4vw,36px)] font-normal transform-3d'><a href="mailto:yang6405@gmail.com">yang6405@gmail.com</a></span>
             </div>
           </div>
@@ -192,40 +192,46 @@ const Main = () => {
               </div>
             </div>
           </div>
-          
-          <div className="relative w-[200px] h-[200px]">
-            {/* Circle text */}
-            <svg
-              className="rotate-text"
-              viewBox="0 0 200 200"
-              width="100%"
-              height="100%"
-              preserveAspectRatio="xMidYMid meet"
-            >
-              <defs>
-                <path
-                  id="circlePath"
-                  d="M 100,100 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"
-                />
-              </defs>
-              <text
-                className="font-manrope font-semibold"
-                fontSize="16"
-                fill="#000"
-                textAnchor="middle"
-                style={{ letterSpacing: "2px" }}
-              >
-                <textPath href="#circlePath" startOffset="50%">
-                  I would like to say hi, drop me a message
-                </textPath>
-              </text>
-            </svg>
 
-            {/* Center icon */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <FaAsterisk className='arrow text-[36px]' />
+          <div className='flex items-center'>
+            <div className='basis-3/4'>
+              <h1 className='font-manrope text-[clamp(36px,20vw,80px)]'>Always open to great collaboration opportunities.</h1>
+            </div>
+            <div className="relative w-[200px] h-[200px] basis-1/4">
+              {/* Circle text */}
+              <svg
+                className="rotate-text"
+                viewBox="0 0 200 200"
+                width="100%"
+                height="100%"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <defs>
+                  <path
+                    id="circlePath"
+                    d="M 100,100 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"
+                  />
+                </defs>
+                <text
+                  className="font-manrope font-semibold"
+                  fontSize="16"
+                  fill="#000"
+                  textAnchor="middle"
+                  style={{ letterSpacing: "2px" }}
+                >
+                  <textPath href="#circlePath" startOffset="50%">
+                    Would like to say hi, drop me a email
+                  </textPath>
+                </text>
+              </svg>
+
+              {/* Center icon */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <FaAsterisk className='arrow text-[36px]' />
+              </div>
             </div>
           </div>
+
         </div>
       </section>
     </>

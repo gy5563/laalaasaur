@@ -2,6 +2,7 @@ import './globals.css';
 import { ReactNode } from 'react';
 import CustomCursor from './components/cursor';
 import Navbar from './components/navbar';
+import ScrollToTop from './components/scrolltotop';
 
 export const metadata = {
     title: 'Laalaa Portfolio',
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <Navbar />
                 {children}
                 <CustomCursor />
+                <ScrollToTop />
             </body>
         </html>
     );

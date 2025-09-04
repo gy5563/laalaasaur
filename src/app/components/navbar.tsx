@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { IoMdArrowForward } from "react-icons/io";
 
 const Navbar = () => {
   const navbarRef = useRef<HTMLDivElement>(null);
@@ -69,11 +70,9 @@ const Navbar = () => {
       style={{ transform: 'translateY(0)', opacity: 1 }}
     >
       <div className="mx-auto flex justify-between items-center">
-        <span className='font-manrope font-bold text-[clamp(12px,4vw,32px)]'>GuangY.</span>
-        <ul className="navbar flex gap-8 text-[clamp(12px,4vw,20px)] font-manrope font-normal">
-          <li className='menu'>Home</li>
-          <li className='menu'>About</li>
-          <li className='menu'>Contact</li>
+        <a href="#"><span className='font-manrope font-medium text-[clamp(12px,4vw,32px)]'>GuangY.</span></a>
+        <ul className="navbar flex text-[clamp(12px,4vw,32px)] font-manrope font-medium">
+          <a href=""><li className='menu flex items-center gap-1'>Let's Talk<IoMdArrowForward /></li></a>
         </ul>
       </div>
     </div>
