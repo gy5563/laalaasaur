@@ -6,7 +6,7 @@ import { animateHero } from './animations/gsapAnimation';
 import InfiniteMarquee from './test'
 import { ReactLenis } from 'lenis/react'
 import { MdOutlineArrowOutward } from 'react-icons/md';
-import { FaAsterisk } from "react-icons/fa";
+import { RiAsterisk } from "react-icons/ri";
 
 const Main = () => {
   //Hero section
@@ -74,15 +74,20 @@ const Main = () => {
             <div className='basis-1/2'>
               <p className='text-[clamp(20px,4vw,32px)]'>Hi! Welcome to my portfolio showcase, I am Guang Yang, a web dev enthusiatic, specialized in front-end development. Currently discovering full stacks development, stay around for more projects upload!</p>
             </div>
-            <div className='basis-1/2 '>
+            <div className='basis-1/2 flex flex-col gap-2'>
                 <a
-                  href="https://example.com"
+                  href="https://www.linkedin.com/in/hee-guang-yang-737929247/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className='flex justify-end items-center text-[clamp(20px,4vw,24px)]'>LinkedIn<MdOutlineArrowOutward className='arrow text-[24px]' /></span>
-                  <span className='flex justify-end items-center text-[clamp(20px,4vw,24px)]'>CodePen<MdOutlineArrowOutward className='arrow text-[24px]' /></span>
-                  <span className='flex justify-end items-center text-[clamp(20px,4vw,24px)]'>LinkedIn<MdOutlineArrowOutward className='arrow text-[24px]' /></span>
+                  <span className='links flex justify-end items-center text-[clamp(20px,4vw,24px)]'>LinkedIn<MdOutlineArrowOutward className='arrow text-[24px]' /></span>
+                </a>
+                <a 
+                  href="https://codepen.io/gy5563"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className='links flex justify-end items-center text-[clamp(20px,4vw,24px)]'>CodePen<MdOutlineArrowOutward className='arrow text-[24px]' /></span>
                 </a>
             </div>
           </div>
@@ -102,7 +107,7 @@ const Main = () => {
             </div>
             <div className='perspective-[400px] flex flex-col font-manrope'>
               <span ref={contactText} className='flex items-center text-[clamp(20px,4vw,28px)] font-normal'><MdOutlineArrowOutward className='arrow text-[24px]' />Contact Me</span>
-              <span ref={myEmail} className='email text-[clamp(20px,4vw,36px)] font-normal transform-3d'><a href="mailto:yang6405@gmail.com">yang6405@gmail.com</a></span>
+              <span ref={myEmail} className='links text-[clamp(20px,4vw,36px)] font-normal transform-3d'><a href="mailto:yang6405@gmail.com">yang6405@gmail.com</a></span>
             </div>
           </div>
         </div>
@@ -116,11 +121,17 @@ const Main = () => {
           <div className='mt-6 flex justify-center gap-2'>
             <div className='flex flex-col basis-1/2'>
               <div ref={gallery1} className='clip-path'>
-                <img
-                  src='images/showcase-01.jpg'
-                  alt='Random'
-                  className='showcase w-full h-[600px] object-cover'
-                />
+                <a 
+                  href="https://timeless-vacation.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src='images/showcase-01.jpg'
+                    alt='Random'
+                    className='links w-full h-[600px] object-cover'
+                  />
+                </a>
                 <div className='flex justify-between items-center'>
                   <span className='font-manrope font-medium text-[clamp(24px,8vw,52px)]'>Timeless Vacation</span>
                   <MdOutlineArrowOutward className='arrow text-[52px]' />
@@ -129,22 +140,34 @@ const Main = () => {
             </div>
             <div className='flex flex-col basis-1/2'>
               <div ref={gallery2} className='clip-path'>
-                <img
-                  src='images/showcase-03.jpg'
-                  alt='Random'
-                  className='showcase w-full h-[400px] object-cover'
-                />
+                <a 
+                  href="https://chooi.com.my/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src='images/showcase-03.jpg'
+                    alt='Random'
+                    className='links w-full h-[400px] object-cover'
+                  />
+                </a>
                 <div className='flex justify-between items-center'>
                   <span className='font-manrope font-medium text-[clamp(24px,8vw,52px)]'>Chooi & Company</span>
                   <MdOutlineArrowOutward className='arrow text-[52px]' />
                 </div>
               </div>
               <div ref={gallery3} className='clip-path'>
-                <img
-                  src='images/showcase-02.jpg'
-                  alt='Random'
-                  className='showcase w-full h-[500px] object-cover'
-                />
+                <a 
+                  href="https://otterbarista.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src='images/showcase-02.jpg'
+                    alt='Random'
+                    className='links w-full h-[500px] object-cover'
+                  />
+                </a>
                 <div className='flex justify-between items-center'>
                   <span className='font-manrope font-medium text-[clamp(24px,8vw,52px)]'>Otter Barista</span>
                   <MdOutlineArrowOutward className='arrow text-[52px]' />
@@ -152,52 +175,57 @@ const Main = () => {
               </div>
             </div>
           </div>
-          <InfiniteMarquee />
-          <div className='mt-6 flex'>
+        </div>
+      </section>
+          
+      <InfiniteMarquee />
+      <section className='flex justify-center'>
+        <div className='container'>
+          {/* <div className='mt-6 flex'>
             <div className='basis-1/2'>
-              <div className='w-[clamp(200px,4vw,600px)]'>
-                <h1 className='font-manrope font-medium text-[clamp(24px,4vw,36px)]'>Tech stack I use for most of the projects</h1>
+              <div className='w-auto'>
+                <h1 className='font-manrope font-medium text-[clamp(24px,8vw,52px)]'>Tech stack I use for most of the projects</h1>
               </div>
             </div>
             <div className='basis-1/2'>
-              <div className='grid grid-cols-2 grid-rows-2 border border-gray-400 font-manrope h-dvh'>
-                <div className='flex justify-center items-center border-r border-b border-gray-400'>
+              <div className='grid grid-cols-2 grid-rows-2 border border-gray-400 font-manrope h-[40dvh]'>
+                <div className='flex justify-center items-center border-r border-b border-gray-400 p-8'>
                   <img
                     src='images/nextjs.webp'
                     alt='Random'
-                    className='h-8 object-cover'
+                    className='h-auto'
                   />
                 </div>
-                <div className='flex justify-center items-center border-b border-gray-400'>
+                <div className='flex justify-center items-center border-b border-gray-400 p-8'>
                   <img
                     src='images/gsap.png'
                     alt='Random'
-                    className='h-8 object-cover'
+                    className='h-auto'
                   />
                 </div>
-                <div className='flex justify-center items-center border-r border-gray-400'>
+                <div className='flex justify-center items-center border-r border-gray-400 p-8'>
                   <img
                     src='images/tailwindcss.png'
                     alt='Random'
-                    className='h-8 object-cover'
+                    className='h-auto'
                   />
                 </div>
-                <div className='flex justify-center items-center'>
+                <div className='flex justify-center items-center p-8'>
                   <img
                     src='images/wordpress.png'
                     alt='Random'
-                    className='h-8 object-cover'
+                    className='h-auto'
                   />
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className='flex items-center'>
-            <div className='basis-3/4'>
-              <h1 className='font-manrope text-[clamp(36px,20vw,80px)]'>Always open to great collaboration opportunities.</h1>
+          <div className='flex items-center text-black p-6'>
+            <div className='basis-1/2'>
+              <h1 className='font-manrope text-[clamp(24px,4vw,80px)] leading-[1.1] font-normal'>Always open to great collaboration opportunities.</h1>
             </div>
-            <div className="relative w-[200px] h-[200px] basis-1/4">
+            <div className="relative w-[300px] h-[300px] basis-1/2">
               {/* Circle text */}
               <svg
                 className="rotate-text"
@@ -209,12 +237,12 @@ const Main = () => {
                 <defs>
                   <path
                     id="circlePath"
-                    d="M 100,100 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"
+                    d="M 100,100 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
                   />
                 </defs>
                 <text
                   className="font-manrope font-semibold"
-                  fontSize="16"
+                  fontSize="20"
                   fill="#000"
                   textAnchor="middle"
                   style={{ letterSpacing: "2px" }}
@@ -227,11 +255,10 @@ const Main = () => {
 
               {/* Center icon */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <FaAsterisk className='arrow text-[36px]' />
+                <RiAsterisk className='arrow text-[clamp(36px,4vw,128px)]' />
               </div>
             </div>
           </div>
-
         </div>
       </section>
     </>

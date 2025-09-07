@@ -1,11 +1,7 @@
 .main{
   position: relative;
   display: flex;
-  overflow: hidden;
-}
-
-.main img{
-  object-fit: cover;
+  overflow-x: hidden;
 }
 
 .slider{

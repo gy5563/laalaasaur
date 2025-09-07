@@ -12,6 +12,10 @@ body {
   cursor: none;
 }
 
+*:hover {
+  cursor: none;
+}
+
 .container {
   padding: 3rem 1em;
 }

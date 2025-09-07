@@ -70,9 +70,9 @@ const Navbar = () => {
       style={{ transform: 'translateY(0)', opacity: 1 }}
     >
       <div className="mx-auto flex justify-between items-center">
-        <a href="#"><span className='font-manrope font-medium text-[clamp(12px,4vw,32px)]'>GuangY.</span></a>
-        <ul className="navbar flex text-[clamp(12px,4vw,32px)] font-manrope font-medium">
-          <a href=""><li className='menu flex items-center gap-1'>Let&apos;s Talk<IoMdArrowForward /></li></a>
+        <a href="#"><span className='font-manrope font-normal text-[clamp(20px,4vw,28px)]'>GuangY.</span></a>
+        <ul className="navbar flex text-[clamp(20px,4vw,28px)] font-manrope font-normal">
+          <a href="mailto:yang6405@gmail.com"><li className='links menu flex items-center gap-1'>Let&apos;s Talk<IoMdArrowForward /></li></a>
         </ul>
       </div>
     </div>

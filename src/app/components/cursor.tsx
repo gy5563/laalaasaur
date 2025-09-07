@@ -47,7 +47,7 @@ const CustomCursor = () => {
 
     document.addEventListener('mousemove', moveCursor);
 
-    const hoverTargets = document.querySelectorAll(".showcase, .menu, .email");
+    const hoverTargets = document.querySelectorAll(".links");
 
     hoverTargets.forEach((target) => {
     target.addEventListener("mouseenter", () => {

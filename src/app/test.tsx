@@ -36,7 +36,7 @@ const animate = () => {
     <main className={styles.main}>
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
-          <p ref={firstText}>hello hello hello hello</p>
+          <p ref={firstText}>Eat. Sleep. Wake. Work.</p>
           <p ref={secondText}></p>
         </div>
       </div>
