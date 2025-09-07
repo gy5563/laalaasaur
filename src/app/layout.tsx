@@ -16,7 +16,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <Navbar />
                 {children}
                 <CustomCursor />
-                <ScrollToTop />
+                <div className="hidden md:block">
+                    <ScrollToTop />
+                </div>
             </body>
         </html>
     );

@@ -113,67 +113,132 @@ const Main = () => {
         </div>
       </section>
 
-      <section className='flex justify-center'>
+      <section className='mt-6 flex justify-center'>
         <div className='container'>
-          <div className='mt-6'>
-            <h1 className='font-manrope font-medium text-[clamp(24px,8vw,52px)] transform-3d'>Showcase of some works I did</h1>
-          </div>
-          <div className='mt-6 flex justify-center gap-2'>
-            <div className='flex flex-col basis-1/2'>
-              <div ref={gallery1} className='clip-path'>
-                <a 
-                  href="https://timeless-vacation.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src='images/showcase-01.jpg'
-                    alt='Random'
-                    className='links w-full h-[600px] object-cover'
-                  />
-                </a>
-                <div className='flex justify-between items-center'>
-                  <span className='font-manrope font-medium text-[clamp(24px,8vw,52px)]'>Timeless Vacation</span>
-                  <MdOutlineArrowOutward className='arrow text-[52px]' />
-                </div>
+          <div className='flex flex-col md:flex-row'>
+            <div className='basis-1/2'>
+              <h1 className='font-manrope font-medium text-[clamp(36px,4vw,52px)] border-b'>Tech Stacks I Use</h1>
+            </div>
+
+            <div className="mt-6 basis-1/2 grid grid-cols-4 gap-4 font-manrope">
+              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
+                <img
+                  src='images/nextjs.png'
+                  alt='Random'
+                  className='h-[clamp(40px,6vw,80px)]'
+                />
+              </div>
+              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
+                <img
+                  src='images/gsap.png'
+                  alt='Random'
+                  className='h-[clamp(30px,6vw,80px)]'
+                />
+              </div>
+              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
+                <img
+                  src='images/tailwindcss.png'
+                  alt='Random'
+                  className='h-[clamp(40px,6vw,80px)]'
+                />
+              </div>
+              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
+                <img
+                  src='images/wordpress.png'
+                  alt='Random'
+                  className='h-[clamp(40px,6vw,80px)]'
+                />
+              </div>
+              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
+                <img
+                  src='images/html.png'
+                  alt='Random'
+                  className='h-[clamp(40px,6vw,80px)]'
+                />
+              </div>
+              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
+                <img
+                  src='images/css.png'
+                  alt='Random'
+                  className='h-[clamp(40px,6vw,80px)]'
+                />
+              </div>
+              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
+                <img
+                  src='images/javascript.png'
+                  alt='Random'
+                  className='h-[clamp(40px,6vw,80px)] w-full'
+                />
               </div>
             </div>
-            <div className='flex flex-col basis-1/2'>
-              <div ref={gallery2} className='clip-path'>
+          </div>
+          
+          <div className='mt-6'>
+            <h1 className='font-manrope font-medium text-[clamp(36px,4vw,52px)] transform-3d border-b'>Showcase Of Some Works I Did</h1>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="clip-path" ref={gallery1}>
+              <a 
+                href="https://timeless-vacation.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="images/showcase-01.jpg"
+                  alt="Timeless Vacation"
+                  className="links object-cover w-full"
+                />
+              </a>
+              <div className="flex justify-between items-center mt-2">
+                <span className="font-manrope font-medium text-[clamp(24px,8vw,52px)] leading-[1.1]">
+                  Timeless Vacation
+                </span>
+                <MdOutlineArrowOutward className="arrow text-[52px]" />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6">
+              <div className="clip-path" ref={gallery2}>
                 <a 
                   href="https://chooi.com.my/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    src='images/showcase-03.jpg'
-                    alt='Random'
-                    className='links w-full h-[400px] object-cover'
+                    src="images/showcase-03.jpg"
+                    alt="Chooi & Company"
+                    className="links object-cover w-full"
                   />
                 </a>
-                <div className='flex justify-between items-center'>
-                  <span className='font-manrope font-medium text-[clamp(24px,8vw,52px)]'>Chooi & Company</span>
-                  <MdOutlineArrowOutward className='arrow text-[52px]' />
+                <div className="flex justify-between items-center mt-2">
+                  <span className="font-manrope font-medium text-[clamp(24px,8vw,52px)] leading-[1.1]">
+                    Chooi & Company
+                  </span>
+                  <MdOutlineArrowOutward className="arrow text-[52px]" />
                 </div>
               </div>
-              <div ref={gallery3} className='clip-path'>
+
+              <div className="clip-path" ref={gallery3}>
                 <a 
                   href="https://otterbarista.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    src='images/showcase-02.jpg'
-                    alt='Random'
-                    className='links w-full h-[500px] object-cover'
+                    src="images/showcase-02.jpg"
+                    alt="Otter Barista"
+                    className="links object-cover w-full"
                   />
                 </a>
-                <div className='flex justify-between items-center'>
-                  <span className='font-manrope font-medium text-[clamp(24px,8vw,52px)]'>Otter Barista</span>
-                  <MdOutlineArrowOutward className='arrow text-[52px]' />
+                <div className="flex justify-between items-center mt-2">
+                  <span className="font-manrope font-medium text-[clamp(24px,8vw,52px)] leading-[1.1]">
+                    Otter Barista
+                  </span>
+                  <MdOutlineArrowOutward className="arrow text-[52px]" />
                 </div>
               </div>
             </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -181,51 +246,11 @@ const Main = () => {
       <InfiniteMarquee />
       <section className='flex justify-center'>
         <div className='container'>
-          {/* <div className='mt-6 flex'>
-            <div className='basis-1/2'>
-              <div className='w-auto'>
-                <h1 className='font-manrope font-medium text-[clamp(24px,8vw,52px)]'>Tech stack I use for most of the projects</h1>
-              </div>
-            </div>
-            <div className='basis-1/2'>
-              <div className='grid grid-cols-2 grid-rows-2 border border-gray-400 font-manrope h-[40dvh]'>
-                <div className='flex justify-center items-center border-r border-b border-gray-400 p-8'>
-                  <img
-                    src='images/nextjs.webp'
-                    alt='Random'
-                    className='h-auto'
-                  />
-                </div>
-                <div className='flex justify-center items-center border-b border-gray-400 p-8'>
-                  <img
-                    src='images/gsap.png'
-                    alt='Random'
-                    className='h-auto'
-                  />
-                </div>
-                <div className='flex justify-center items-center border-r border-gray-400 p-8'>
-                  <img
-                    src='images/tailwindcss.png'
-                    alt='Random'
-                    className='h-auto'
-                  />
-                </div>
-                <div className='flex justify-center items-center p-8'>
-                  <img
-                    src='images/wordpress.png'
-                    alt='Random'
-                    className='h-auto'
-                  />
-                </div>
-              </div>
-            </div>
-          </div> */}
-
           <div className='flex items-center text-black p-6'>
             <div className='basis-1/2'>
               <h1 className='font-manrope text-[clamp(24px,4vw,80px)] leading-[1.1] font-normal'>Always open to great collaboration opportunities.</h1>
             </div>
-            <div className="relative w-[300px] h-[300px] basis-1/2">
+            <div className="relative w-[clamp(120px,20vw,300px)] h-[clamp(120px,20vw,300px)] basis-1/2">
               {/* Circle text */}
               <svg
                 className="rotate-text"
