@@ -36,8 +36,8 @@ const animate = () => {
     <main className={styles.main}>
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
-          <p ref={firstText} className='text-[clamp(80px,6vw,200px)]'>Eat. Sleep. Wake. Work.</p>
-          <p ref={secondText} className='text-[clamp(80px,6vw,200px)]'></p>
+          <p ref={firstText} className='text-[clamp(80px,10vw,200px)]'>Eat. Sleep. Wake. Work.</p>
+          <p ref={secondText} className='text-[clamp(80px,10vw,200px)]'></p>
         </div>
       </div>
     </main>

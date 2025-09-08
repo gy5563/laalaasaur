@@ -23,6 +23,8 @@ const Main = () => {
   const gallery1 = useRef<HTMLHeadingElement>(null);
   const gallery2 = useRef<HTMLHeadingElement>(null);
   const gallery3 = useRef<HTMLHeadingElement>(null);
+  const gallery4 = useRef<HTMLHeadingElement>(null);
+  const gallery5 = useRef<HTMLHeadingElement>(null);
 
   useGSAP(() => {
     if (
@@ -37,7 +39,9 @@ const Main = () => {
       myEmail.current &&
       gallery1.current &&
       gallery2.current &&
-      gallery3.current 
+      gallery3.current &&
+      gallery4.current &&
+      gallery5.current
     ) {
       animateHero({
         //Hero section
@@ -54,6 +58,8 @@ const Main = () => {
         galleryOne: gallery1.current,
         galleryTwo: gallery2.current,
         galleryThree: gallery3.current,
+        galleryFour: gallery4.current,
+        galleryFive: gallery5.current,
       });
     }
   }, []);
@@ -176,27 +182,26 @@ const Main = () => {
           <div className='mt-6'>
             <h1 className='font-manrope font-medium text-[clamp(36px,4vw,52px)] transform-3d border-b'>Showcase Of Some Works I Did</h1>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="clip-path" ref={gallery1}>
-              <a 
-                href="https://timeless-vacation.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="images/showcase-01.jpg"
-                  alt="Timeless Vacation"
-                  className="links object-cover w-full"
-                />
-              </a>
-              <div className="flex justify-between items-center mt-2">
-                <span className="font-manrope font-medium text-[clamp(24px,8vw,52px)] leading-[1.1]">
-                  Timeless Vacation
-                </span>
-                <MdOutlineArrowOutward className="arrow text-[52px]" />
+              <div className="clip-path" ref={gallery1}>
+                <a 
+                  href="https://timeless-vacation.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="images/showcase-01.jpg"
+                    alt="Timeless Vacation"
+                    className="links object-cover w-full"
+                  />
+                </a>
+                <div className="flex justify-between items-center mt-2">
+                  <span className="font-manrope font-medium text-[clamp(24px,8vw,52px)] leading-[1.1]">
+                    Timeless Vacation
+                  </span>
+                  <MdOutlineArrowOutward className="arrow text-[52px]" />
+                </div>
               </div>
-            </div>
 
-            <div className="grid grid-cols-1 gap-6">
               <div className="clip-path" ref={gallery2}>
                 <a 
                   href="https://chooi.com.my/"
@@ -236,9 +241,47 @@ const Main = () => {
                   <MdOutlineArrowOutward className="arrow text-[52px]" />
                 </div>
               </div>
-            </div>
-            </div>
 
+              <div className="clip-path" ref={gallery4}>
+                <a 
+                  href="https://sanjaymohan.com.my/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="images/showcase-04.jpg"
+                    alt="Sanjay Mohan"
+                    className="links object-cover w-full"
+                  />
+                </a>
+                <div className="flex justify-between items-center mt-2">
+                  <span className="font-manrope font-medium text-[clamp(24px,8vw,52px)] leading-[1.1]">
+                    Sanjay Mohan
+                  </span>
+                  <MdOutlineArrowOutward className="arrow text-[52px]" />
+                </div>
+              </div>
+
+              <div className="clip-path" ref={gallery5}>
+                <a 
+                  href="https://nofreedesignmovement.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="images/showcase-05.jpg"
+                    alt="NoFreeDesignMovement"
+                    className="links object-cover w-full"
+                  />
+                </a>
+                <div className="flex justify-between items-center mt-2">
+                  <span className="font-manrope font-medium text-[clamp(24px,8vw,52px)] leading-[1.1]">
+                    No Free Design Movement
+                  </span>
+                  <MdOutlineArrowOutward className="arrow text-[52px]" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

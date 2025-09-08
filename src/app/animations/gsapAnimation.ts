@@ -17,6 +17,8 @@ export function animateHero({
   galleryOne,
   galleryTwo,
   galleryThree,
+  galleryFour,
+  galleryFive,
 }: {
   section: HTMLElement;
   topLayer: HTMLElement;
@@ -30,6 +32,8 @@ export function animateHero({
   galleryOne: HTMLElement;
   galleryTwo: HTMLElement;
   galleryThree: HTMLElement;
+  galleryFour: HTMLElement;
+  galleryFive: HTMLElement;
 }) {
   const tl = gsap.timeline({ delay: 0.3 });
 
@@ -183,6 +187,26 @@ export function animateHero({
     ease: "power2.out",
     scrollTrigger: {
       trigger: galleryThree,
+      start: 'center bottom',
+    },
+  });
+
+  gsap.to(galleryFour, {
+    clipPath: "inset(0% 0% 0% 0%)",
+    duration: 1.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: galleryFour,
+      start: 'center bottom',
+    },
+  });
+
+  gsap.to(galleryFive, {
+    clipPath: "inset(0% 0% 0% 0%)",
+    duration: 1.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: galleryFive,
       start: 'center bottom',
     },
   });
