@@ -162,9 +162,9 @@ export function animateHero({
 
   //Gallery Animations
   gsap.to(galleryOne, {
-    clipPath: "inset(0% 0% 0% 0%)",
+    clipPath: 'inset(0% 0% 0% 0%)',
     duration: 1.5,
-    ease: "power2.out",
+    ease: 'power2.out',
     scrollTrigger: {
       trigger: galleryOne,
       start: 'center bottom',
@@ -172,9 +172,9 @@ export function animateHero({
   });
 
   gsap.to(galleryTwo, {
-    clipPath: "inset(0% 0% 0% 0%)",
+    clipPath: 'inset(0% 0% 0% 0%)',
     duration: 1.5,
-    ease: "power2.out",
+    ease: 'power2.out',
     scrollTrigger: {
       trigger: galleryTwo,
       start: 'center bottom',
@@ -182,9 +182,9 @@ export function animateHero({
   });
 
   gsap.to(galleryThree, {
-    clipPath: "inset(0% 0% 0% 0%)",
+    clipPath: 'inset(0% 0% 0% 0%)',
     duration: 1.5,
-    ease: "power2.out",
+    ease: 'power2.out',
     scrollTrigger: {
       trigger: galleryThree,
       start: 'center bottom',
@@ -192,9 +192,9 @@ export function animateHero({
   });
 
   gsap.to(galleryFour, {
-    clipPath: "inset(0% 0% 0% 0%)",
+    clipPath: 'inset(0% 0% 0% 0%)',
     duration: 1.5,
-    ease: "power2.out",
+    ease: 'power2.out',
     scrollTrigger: {
       trigger: galleryFour,
       start: 'center bottom',
@@ -202,9 +202,9 @@ export function animateHero({
   });
 
   gsap.to(galleryFive, {
-    clipPath: "inset(0% 0% 0% 0%)",
+    clipPath: 'inset(0% 0% 0% 0%)',
     duration: 1.5,
-    ease: "power2.out",
+    ease: 'power2.out',
     scrollTrigger: {
       trigger: galleryFive,
       start: 'center bottom',

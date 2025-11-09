@@ -3,10 +3,11 @@
 import React, { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { animateHero } from './animations/gsapAnimation';
-import InfiniteMarquee from './test'
-import { ReactLenis } from 'lenis/react'
-import { MdOutlineArrowOutward } from 'react-icons/md';
-import { RiAsterisk } from "react-icons/ri";
+import { ReactLenis } from 'lenis/react';
+import { RiArrowRightUpLine } from 'react-icons/ri';
+import { RiAsterisk } from 'react-icons/ri';
+import Image from 'next/image';
+import CircularText from './components/circulartext';
 
 const Main = () => {
   //Hero section
@@ -67,265 +68,172 @@ const Main = () => {
   return (
     <>
       <ReactLenis root />
-      <section
-        ref={sectionRef}
-        className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center"
-      >
-        <div className='container'>
-          <h1 ref={heading1} className='perspective-h1 relative z-200 text-[clamp(36px,20vw,240px)] leading-none font-manrope font-bold text-amber-50 mix-blend-difference transform-3d'>Hello</h1>
-          <h1 ref={heading2} className='perspective-h1 relative z-200 text-[clamp(36px,20vw,240px)] leading-none font-manrope font-bold text-amber-50 mix-blend-difference transform-3d'>I&apos;m Guang</h1>
-
-          {/* Bottom layer (revealed) */}
-          <div className="absolute px-2 sm:px-6 md:px-24 py-8 inset-0 bg-linear-to-t from-neutral-900 to-black font-manrope font-light text-white flex items-end z-10">
-            <div className='basis-1/2'>
-              <p className='text-[clamp(20px,4vw,32px)]'>Hi! Welcome to my portfolio showcase, I am Guang Yang, a web dev enthusiatic, specialized in front-end development. Currently discovering full stacks development, stay around for more projects upload!</p>
-            </div>
-            <div className='basis-1/2 flex flex-col gap-2'>
-                <a
-                  href="https://www.linkedin.com/in/hee-guang-yang-737929247/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className='links flex justify-end items-center text-[clamp(20px,4vw,24px)]'>LinkedIn<MdOutlineArrowOutward className='arrow text-[24px]' /></span>
-                </a>
-                <a 
-                  href="https://codepen.io/gy5563"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className='links flex justify-end items-center text-[clamp(20px,4vw,24px)]'>CodePen<MdOutlineArrowOutward className='arrow text-[24px]' /></span>
-                </a>
-            </div>
-          </div>
-
-          {/* Top layer (clipped away on scroll) */}
-          <div
-            ref={topLayerRef}
-           className="absolute py-4 px-2 sm:px-6 md:px-24 inset-0 bg-white text-black flex items-end justify-between z-20"
-            style={{
-              clipPath: 'inset(0% 0% 0% 0%)', // fully visible at start
-            }}
+      <section className='max-w-full h-screen flex flex-col justify-center items-center'>
+        <div className='max-w-[1280px] flex flex-col items-start gap-6'>
+          <h1
+            ref={heading1}
+            className='font-zalando font-bold perspective-h1 relative z-200 leading-none text-amber-50 transform-3d'
           >
-            <div className='perspective-[400px] flex flex-col gap-3'>
-              <span ref={myText} className='text-[clamp(20px,4vw,36px)] leading-[1] font-manrope font-normal transform-3d'>/Web Designer</span>
-              <span ref={portfolioText} className='text-[clamp(20px,4vw,36px)] leading-[1] font-manrope font-normal transform-3d'>/Front-End Web Developer</span>
-              <span ref={showcaseText} className='text-[clamp(20px,4vw,36px)] leading-[1] font-manrope font-normal transform-3d'>/Web Animator</span>
+            Hello,{' '}
+            <span className='inline-block translate-y-[12px]'>
+              <Image
+                className='max-w-32 rounded-2xl shadow-lg'
+                src='/images/portrait.png'
+                alt='Description'
+                width='120'
+                height='120'
+              />
+            </span>
+          </h1>
+          <h1
+            ref={heading2}
+            className='font-zalando font-bold perspective-h1 relative z-200 leading-none text-amber-50 transform-3d'
+          >
+            I&apos;m Guang Yang
+          </h1>
+          <p className='font-poppins font-light text-amber-50 max-w-2xl'>
+            I&apos;m a Front-end Web Developer and UI/UX Designer from Selangor,
+            Malaysia. Available for work.
+          </p>
+          <a href='#' className='font-poppins rounded-4xl px-4 py-1.5 border border-white text-amber-50 font-light flex justify-center items-center gap-1 hover:bg-amber-50 hover:text-[#1b1b1b] transition duration-300 ease-in-out'>Reach me out!<RiArrowRightUpLine className='text-2xl' /></a>
+        </div>
+      </section>
+
+      <section className='flex justify-center max-w-full pb-30'>
+        <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row container justify-between'>
+          <div className='flex flex-col basis-1/2 gap-3'>
+            <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Skills</span>
+            <h2 className='font-zalando font-bold text-amber-50 leading-[1.25] max-w-2xl'>
+              All those technologies I use
+            </h2>
+            <p className='font-poppins font-light text-amber-50 max-w-2xl'>I build things mostly with these — but I love learning new ones.</p>
+          </div>
+
+          <div className='flex basis-1/2 gap-6'>
+            <div className='flex flex-wrap flex-col gap-4'>
+              <h3 className='font-zalando text-amber-50 text-2xl pb-2 [writing-mode:vertical-lr] [text-orientation:mixed]'>Tech Stack</h3>
+              <ul className='flex gap-1 flex-wrap'>
+                <li className='tags'>HTML</li>
+                <li className='tags'>CSS</li>
+                <li className='tags'>JavaScript</li>
+                <li className='tags'>React</li>
+                <li className='tags'>NextJS</li>
+                <li className='tags'>TailwindCSS</li>
+                <li className='tags'>GSAP</li>
+                <li className='tags'>Motion</li>
+              </ul>
             </div>
-            <div className='perspective-[400px] flex flex-col font-manrope'>
-              <span ref={contactText} className='flex items-center text-[clamp(20px,4vw,28px)] font-normal'><MdOutlineArrowOutward className='arrow text-[24px]' />Contact Me</span>
-              <span ref={myEmail} className='links text-[clamp(20px,4vw,36px)] font-normal transform-3d'><a href="mailto:yang6405@gmail.com">yang6405@gmail.com</a></span>
+
+            <div className='flex flex-wrap flex-col gap-3'>
+              <h3 className='font-zalando text-amber-50 text-2xl pb-2 [writing-mode:vertical-lr] [text-orientation:mixed]'>Other Tools</h3>
+              <ul className='flex gap-1 flex-wrap'>
+                <li className='tags'>Figma</li>
+                <li className='tags'>Adobe XD</li>
+                <li className='tags'>Adobe Photoshop</li>
+                <li className='tags'>Adobe Illustratorp</li>
+                <li className='tags'>Framer</li>
+                <li className='tags'>Shopify</li>
+                <li className='tags'>WordPress</li>
+                <li className='tags'>Webflow</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section className='mt-6 flex justify-center'>
-        <div className='container'>
-          <div className='flex flex-col md:flex-row'>
-            <div className='basis-1/2'>
-              <h1 className='font-manrope font-medium text-[clamp(36px,4vw,52px)] border-b'>Tech Stacks I Use</h1>
-            </div>
+      <section className='flex justify-center max-w-full pb-30'>
+        <div className='container flex flex-col gap-12'>
+          <div className='max-w-3xl flex flex-col gap-6'>
+            <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Services</span>
+            <h2 className='font-zalando font-bold text-amber-50 leading-[1.25]'>
+              Explore my comprehensive service offerings
+            </h2>
+            <p className='font-poppins font-light text-amber-50 max-w-2xl'>Every service I offer is designed to help you attract, impress, and convert.</p>
+          </div>
 
-            <div className="mt-6 basis-1/2 grid grid-cols-4 gap-4 font-manrope">
-              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
-                <img
-                  src='images/nextjs.png'
-                  alt='Random'
-                  className='h-[clamp(40px,6vw,80px)]'
-                />
-              </div>
-              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
-                <img
-                  src='images/gsap.png'
-                  alt='Random'
-                  className='h-[clamp(30px,6vw,80px)]'
-                />
-              </div>
-              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
-                <img
-                  src='images/tailwindcss.png'
-                  alt='Random'
-                  className='h-[clamp(40px,6vw,80px)]'
-                />
-              </div>
-              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
-                <img
-                  src='images/wordpress.png'
-                  alt='Random'
-                  className='h-[clamp(40px,6vw,80px)]'
-                />
-              </div>
-              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
-                <img
-                  src='images/html.png'
-                  alt='Random'
-                  className='h-[clamp(40px,6vw,80px)]'
-                />
-              </div>
-              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
-                <img
-                  src='images/css.png'
-                  alt='Random'
-                  className='h-[clamp(40px,6vw,80px)]'
-                />
-              </div>
-              <div className='flex justify-center items-center p-4 sm:p-6 md:p-8'>
-                <img
-                  src='images/javascript.png'
-                  alt='Random'
-                  className='h-[clamp(40px,6vw,80px)] w-full'
-                />
-              </div>
+          <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <div className='border-l border-amber-50 pl-4 basis-1/4 flex flex-col justify-between'>
+              <h3 className='font-zalando text-amber-50 text-2xl pb-2'>/Website<br /> Design</h3>
+              <p className='font-poppins font-light text-amber-50'>I create user-focused interfaces that make navigation effortless and enjoyable, helping visitors stay longer and engage more deeply.</p>
+            </div>
+            <div className='border-l border-amber-50 pl-4 basis-1/4 flex flex-col justify-between'>
+              <h3 className='font-zalando text-amber-50 text-2xl pb-2'>/Frontend Development</h3>
+              <p className='font-poppins font-light text-amber-50'>Using modern frameworks like React and Tailwind, I ensure your site loads quickly, adapts perfectly to all screens, and delivers a seamless experience.</p>
+            </div>
+            <div className='border-l border-amber-50 pl-4 basis-1/4 flex flex-col justify-between'>
+              <h3 className='font-zalando text-amber-50 text-2xl pb-2'>/Performance & Optimization</h3>
+              <p className='font-poppins font-light text-amber-50'>I analyze and fine-tune your site’s speed, SEO, and accessibility to ensure every millisecond counts.</p>
+            </div>
+            <div className='border-l border-amber-50 pl-4 basis-1/4 flex flex-col justify-between'>
+              <h3 className='font-zalando text-amber-50 text-2xl pb-2'>/Maintenance & Ongoing Support</h3>
+              <p className='font-poppins font-light text-amber-50'>I provide regular updates, backups, and optimizations so you can focus on growing your business while I handle the tech side.</p>
             </div>
           </div>
-          
-          <div className='mt-6'>
-            <h1 className='font-manrope font-medium text-[clamp(36px,4vw,52px)] transform-3d border-b'>Showcase Of Some Works I Did</h1>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="clip-path" ref={gallery1}>
-                <a 
-                  href="https://timeless-vacation.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="images/showcase-01.jpg"
-                    alt="Timeless Vacation"
-                    className="links object-cover w-full"
-                  />
-                </a>
-                <div className="flex justify-between items-center mt-2">
-                  <span className="font-manrope font-medium text-[clamp(24px,8vw,52px)] leading-[1.1]">
-                    Timeless Vacation
-                  </span>
-                  <MdOutlineArrowOutward className="arrow text-[52px]" />
-                </div>
-              </div>
+        </div>
+      </section>
 
-              <div className="clip-path" ref={gallery2}>
-                <a 
-                  href="https://chooi.com.my/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="images/showcase-03.jpg"
-                    alt="Chooi & Company"
-                    className="links object-cover w-full"
-                  />
-                </a>
-                <div className="flex justify-between items-center mt-2">
-                  <span className="font-manrope font-medium text-[clamp(24px,8vw,52px)] leading-[1.1]">
-                    Chooi & Company
-                  </span>
-                  <MdOutlineArrowOutward className="arrow text-[52px]" />
-                </div>
-              </div>
+      <section className='flex justify-center max-w-full pb-30'>
+        <div className='container flex flex-col gap-12'>
+          <div className='max-w-3xl flex flex-col gap-6'>
+            <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Projects</span>
+            <h2 className='font-zalando font-bold text-amber-50 leading-[1.25]'>
+              Featured works
+            </h2>
+            <p className='font-poppins font-light text-amber-50 max-w-2xl'>A selection of projects I’ve designed and built with care and precision.</p>
+          </div>
 
-              <div className="clip-path" ref={gallery3}>
-                <a 
-                  href="https://otterbarista.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="images/showcase-02.jpg"
-                    alt="Otter Barista"
-                    className="links object-cover w-full"
-                  />
-                </a>
-                <div className="flex justify-between items-center mt-2">
-                  <span className="font-manrope font-medium text-[clamp(24px,8vw,52px)] leading-[1.1]">
-                    Otter Barista
-                  </span>
-                  <MdOutlineArrowOutward className="arrow text-[52px]" />
-                </div>
+          <div className='container grid grid-cols-2 gap-12'>
+            <div className='flex flex-col gap-3'>
+              <Image
+                className='shadow-lg w-full aspect-[16/9] object-cover'
+                src='/images/showcase-01.jpg'
+                alt='Description'
+                width={800}
+                height={800}
+              />
+              <div className='flex justify-between items-center'>
+                <h3 className='font-zalando text-amber-50 text-2xl'>Timeless Vacation</h3>
+                <RiArrowRightUpLine className='text-4xl text-amber-50' />
               </div>
-
-              <div className="clip-path" ref={gallery4}>
-                <a 
-                  href="https://sanjaymohan.com.my/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="images/showcase-04.jpg"
-                    alt="Sanjay Mohan"
-                    className="links object-cover w-full"
-                  />
-                </a>
-                <div className="flex justify-between items-center mt-2">
-                  <span className="font-manrope font-medium text-[clamp(24px,8vw,52px)] leading-[1.1]">
-                    Sanjay Mohan
-                  </span>
-                  <MdOutlineArrowOutward className="arrow text-[52px]" />
-                </div>
+              <div className='flex'>
+                <a href='https://timeless-vacation.com/' className='font-poppins font-light text-amber-50 '>https://timeless-vacation.com/</a>
               </div>
+            </div>
 
-              <div className="clip-path" ref={gallery5}>
-                <a 
-                  href="https://nofreedesignmovement.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="images/showcase-05.jpg"
-                    alt="NoFreeDesignMovement"
-                    className="links object-cover w-full"
-                  />
-                </a>
-                <div className="flex justify-between items-center mt-2">
-                  <span className="font-manrope font-medium text-[clamp(24px,8vw,52px)] leading-[1.1]">
-                    No Free Design Movement
-                  </span>
-                  <MdOutlineArrowOutward className="arrow text-[52px]" />
-                </div>
+            <div className='flex flex-col gap-3'>
+              <Image
+                className='shadow-lg w-full aspect-[16/9] object-cover'
+                src='/images/showcase-02.jpg'
+                alt='Description'
+                width={800}
+                height={800}
+              />
+              <div className='flex justify-between items-center'>
+                <h3 className='font-zalando text-amber-50 text-2xl'>Otter Barista</h3>
+                <RiArrowRightUpLine className='text-4xl text-amber-50' />
+              </div>
+              <div className='flex'>
+                <a href='https://otterbarista.com/' target='_blank' className='font-poppins font-light text-amber-50'>https://otterbarista.com/</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-          
-      <InfiniteMarquee />
+
       <section className='flex justify-center'>
         <div className='container'>
-          <div className='flex items-center text-black p-6'>
+          <div className='flex-col items-center text-black p-6'>
             <div className='basis-1/2'>
-              <h1 className='font-manrope text-[clamp(24px,4vw,80px)] leading-[1.1] font-normal'>Always open to great collaboration opportunities.</h1>
+              <h3 className='font-zalando font-normal text-amber-50'>
+                Always open to great collaboration opportunities.
+              </h3>
             </div>
-            <div className="relative w-[clamp(120px,20vw,300px)] h-[clamp(120px,20vw,300px)] basis-1/2">
-              {/* Circle text */}
-              <svg
-                className="rotate-text"
-                viewBox="0 0 200 200"
-                width="100%"
-                height="100%"
-                preserveAspectRatio="xMidYMid meet"
-              >
-                <defs>
-                  <path
-                    id="circlePath"
-                    d="M 100,100 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
-                  />
-                </defs>
-                <text
-                  className="font-manrope font-semibold"
-                  fontSize="20"
-                  fill="#000"
-                  textAnchor="middle"
-                  style={{ letterSpacing: "2px" }}
-                >
-                  <textPath href="#circlePath" startOffset="50%">
-                    Would like to say hi, drop me a email
-                  </textPath>
-                </text>
-              </svg>
-
-              {/* Center icon */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <RiAsterisk className='arrow text-[clamp(36px,4vw,128px)]' />
-              </div>
-            </div>
+            <CircularText
+              text='DROP*ME*A*MESSAGE*'
+              onHover='speedUp'
+              spinDuration={20}
+              className='font-poppins font-light'
+            />
           </div>
         </div>
       </section>

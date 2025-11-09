@@ -1,9 +1,12 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
 	/* config options here */
 	output: 'export',
-	allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
+	images: {
+		unoptimized: true,
+	},
+	allowedDevOrigins: ['http://192.168.0.4:3000'],
 };
 
 export default nextConfig;

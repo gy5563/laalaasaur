@@ -1,26 +1,45 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Savate:wght@200..900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-savate: "Savate", sans-serif;
-  --font-manrope: "Manrope", sans-serif;
+  --font-zalando: "Zalando Sans Expanded", sans-serif;
+  --font-poppins: "Poppins", "sans-serif";
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
-  height: 300vh;
   cursor: none;
+  background-color: #1b1b1b;
 }
 
 *:hover {
   cursor: none;
 }
 
-.container {
-  padding: 3rem 1em;
+h1 {
+  font-size: 6rem;
 }
 
+h2 {
+  font-size: 3.2rem;
+}
 
+h3 {
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+/* Custom Cursor */
 @media only screen and (min-width: 768px) {
   .custom-cursor,
   .custom-cursor-outer {
@@ -28,7 +47,6 @@ body {
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 9999;
     transform: translate(-50%, -50%);
   }
 
@@ -53,6 +71,13 @@ body {
     height: 40px;
     background-color: rgba(139, 139, 139, 0.4);
     border-radius: 50%;
+  }
+}
+
+@media (pointer: coarse) {
+  .custom-cursor,
+  .custom-cursor-outer {
+    display: none !important;
   }
 }
 
@@ -101,25 +126,18 @@ body {
   clip-path: inset(0% 0% 100% 0%);
 }
 
-/* circle-text */
-.circle-text-wrapper {
-  width: 80vw;
-  max-width: 400px;
-  aspect-ratio: 1 / 1;
-}
-
-.rotate-text {
-  animation: spin 10s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* Hero section text */
 .transform-3d {
   transform-style: preserve-3d;
   transform: perspective(800px); /* example */
+}
+
+/* Tags */
+.tags {
+  border-width: 1px;
+  border-radius: 50px;
+  border-color: #fffbeb;
+  color: #fffbeb;
+  font-family: 'Poppins';
+  padding: 0.1rem 1rem;
 }

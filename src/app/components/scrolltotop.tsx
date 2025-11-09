@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { MdArrowUpward } from "react-icons/md";
+import { MdArrowUpward } from 'react-icons/md';
 import gsap from 'gsap'
 
 export default function ScrollToTop() {
@@ -33,7 +33,7 @@ export default function ScrollToTop() {
     <button
       ref={btnRef}
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 p-3 rounded-full bg-black text-white shadow-lg hover:bg-gray-800 transition-colors"
+      className='fixed bottom-6 right-6 p-3 rounded-full bg-black text-white shadow-lg hover:bg-gray-800 transition-colors'
     >
       <MdArrowUpward size={20} />
     </button>
