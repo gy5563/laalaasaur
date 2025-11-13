@@ -34,7 +34,7 @@ h3 {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding-inline: 1rem;
 }
@@ -104,32 +104,11 @@ h3 {
   transform: scaleX(1);
 }
 
-.comparisonContainer {
-  position: relative;
-  height: 100vh;
-  
-}
-
-.comparisonSection {
-  width: 100%;
-  height: 100%;
-}
-
 .after {
   position: absolute;
   overflow: hidden;
   top: 0;
   transform: translate(100%, 0px);
-}
-
-.clip-path {
-  clip-path: inset(0% 0% 100% 0%);
-}
-
-/* Hero section text */
-.transform-3d {
-  transform-style: preserve-3d;
-  transform: perspective(800px); /* example */
 }
 
 /* Tags */
@@ -140,4 +119,17 @@ h3 {
   color: #fffbeb;
   font-family: 'Poppins';
   padding: 0.1rem 1rem;
+}
+
+/* Animation Class */
+.gallery {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: inset(0% 0% 100% 0%);
+  /* fully clipped from top */
+}
+
+.split {
+  overflow: hidden;
 }

@@ -2,80 +2,50 @@
 
 import React, { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
-import { animateHero } from './animations/gsapAnimation';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SplitText } from 'gsap/SplitText';
 import { ReactLenis } from 'lenis/react';
 import { RiArrowRightUpLine } from 'react-icons/ri';
 import { RiAsterisk } from 'react-icons/ri';
 import Image from 'next/image';
-import CircularText from './components/circulartext';
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Main = () => {
-  //Hero section
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const topLayerRef = useRef<HTMLDivElement>(null);
-  const heading1 = useRef<HTMLHeadingElement>(null);
-  const heading2 = useRef<HTMLHeadingElement>(null);
-  const myText = useRef<HTMLHeadingElement>(null);
-  const myEmail = useRef<HTMLHeadingElement>(null);
-  const portfolioText = useRef<HTMLHeadingElement>(null);
-  const showcaseText = useRef<HTMLHeadingElement>(null);
-  const contactText = useRef<HTMLHeadingElement>(null);
-  //Gallery
-  const gallery1 = useRef<HTMLHeadingElement>(null);
-  const gallery2 = useRef<HTMLHeadingElement>(null);
-  const gallery3 = useRef<HTMLHeadingElement>(null);
-  const gallery4 = useRef<HTMLHeadingElement>(null);
-  const gallery5 = useRef<HTMLHeadingElement>(null);
 
   useGSAP(() => {
-    if (
-      sectionRef.current &&
-      topLayerRef.current &&
-      heading1.current &&
-      heading2.current &&
-      myText.current &&
-      portfolioText.current &&
-      showcaseText.current &&
-      contactText.current &&
-      myEmail.current &&
-      gallery1.current &&
-      gallery2.current &&
-      gallery3.current &&
-      gallery4.current &&
-      gallery5.current
-    ) {
-      animateHero({
-        //Hero section
-        section: sectionRef.current,
-        topLayer: topLayerRef.current,
-        headingOne: heading1.current,
-        headingTwo: heading2.current,
-        myText: myText.current,
-        portfolioText: portfolioText.current,
-        showcaseText: showcaseText.current,
-        contactText: contactText.current,
-        myEmail: myEmail.current,
-        //Gallery
-        galleryOne: gallery1.current,
-        galleryTwo: gallery2.current,
-        galleryThree: gallery3.current,
-        galleryFour: gallery4.current,
-        galleryFive: gallery5.current,
-      });
-    }
+    const split = SplitText.create(".split", { type: "words, chars" });
+
+    // now animate the characters in a staggered fashion
+    gsap.from(split.chars, {
+      duration: 1,
+      y: 100,       // animate from 100px below
+      autoAlpha: 0, // fade in from opacity: 0 and visibility: hidden
+      stagger: 0.05 // 0.05 seconds between each
+    });
+
+    gsap.to(".gallery", {
+      clipPath: "inset(0% 0% 0% 0%)", // reveal fully
+      duration: 1.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".gallery",
+        start: "top center"
+      }
+    });
   }, []);
 
   return (
     <>
       <ReactLenis root />
       <section className='max-w-full h-screen flex flex-col justify-center items-center'>
-        <div className='max-w-[1280px] flex flex-col items-start gap-6'>
+        <div className='max-w-7xl flex flex-col items-start gap-6'>
           <h1
-            ref={heading1}
-            className='font-zalando font-bold perspective-h1 relative z-200 leading-none text-amber-50 transform-3d'
+            className='font-zalando font-bold perspective-h1 relative z-200 leading-none text-amber-50 split'
           >
             Hello,{' '}
-            <span className='inline-block translate-y-[12px]'>
+            <span className='inline-block translate-y-3'>
               <Image
                 className='max-w-32 rounded-2xl shadow-lg'
                 src='/images/portrait.png'
@@ -86,8 +56,7 @@ const Main = () => {
             </span>
           </h1>
           <h1
-            ref={heading2}
-            className='font-zalando font-bold perspective-h1 relative z-200 leading-none text-amber-50 transform-3d'
+            className='font-zalando font-bold perspective-h1 relative z-200 leading-none text-amber-50 split'
           >
             I&apos;m Guang Yang
           </h1>
@@ -99,11 +68,11 @@ const Main = () => {
         </div>
       </section>
 
-      <section className='flex justify-center max-w-full pb-30'>
-        <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row container justify-between'>
+      <section className='container flex justify-center max-w-full pb-30'>
+        <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row justify-between'>
           <div className='flex flex-col basis-1/2 gap-3'>
             <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Skills</span>
-            <h2 className='font-zalando font-bold text-amber-50 leading-[1.25] max-w-2xl'>
+            <h2 className='font-zalando font-bold text-amber-50 leading-tight max-w-2xl'>
               All those technologies I use
             </h2>
             <p className='font-poppins font-light text-amber-50 max-w-2xl'>I build things mostly with these — but I love learning new ones.</p>
@@ -141,11 +110,11 @@ const Main = () => {
         </div>
       </section>
 
-      <section className='flex justify-center max-w-full pb-30'>
-        <div className='container flex flex-col gap-12'>
+      <section className='container flex justify-center max-w-full pb-30'>
+        <div className='flex flex-col gap-12'>
           <div className='max-w-3xl flex flex-col gap-6'>
             <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Services</span>
-            <h2 className='font-zalando font-bold text-amber-50 leading-[1.25]'>
+            <h2 className='font-zalando font-bold text-amber-50 leading-tight'>
               Explore my comprehensive service offerings
             </h2>
             <p className='font-poppins font-light text-amber-50 max-w-2xl'>Every service I offer is designed to help you attract, impress, and convert.</p>
@@ -172,20 +141,20 @@ const Main = () => {
         </div>
       </section>
 
-      <section className='flex justify-center max-w-full pb-30'>
-        <div className='container flex flex-col gap-12'>
+      <section className='container flex justify-center max-w-full pb-30'>
+        <div className='flex flex-col gap-12'>
           <div className='max-w-3xl flex flex-col gap-6'>
             <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Projects</span>
-            <h2 className='font-zalando font-bold text-amber-50 leading-[1.25]'>
+            <h2 className='font-zalando font-bold text-amber-50 leading-tight'>
               Featured works
             </h2>
             <p className='font-poppins font-light text-amber-50 max-w-2xl'>A selection of projects I’ve designed and built with care and precision.</p>
           </div>
 
-          <div className='container grid grid-cols-2 gap-12'>
+          <div className='grid grid-cols-2 gap-12'>
             <div className='flex flex-col gap-3'>
               <Image
-                className='shadow-lg w-full aspect-[16/9] object-cover'
+                className='shadow-lg w-full aspect-video object-cover gallery'
                 src='/images/showcase-01.jpg'
                 alt='Description'
                 width={800}
@@ -202,7 +171,7 @@ const Main = () => {
 
             <div className='flex flex-col gap-3'>
               <Image
-                className='shadow-lg w-full aspect-[16/9] object-cover'
+                className='shadow-lg w-full aspect-video object-cover gallery'
                 src='/images/showcase-02.jpg'
                 alt='Description'
                 width={800}
@@ -221,19 +190,12 @@ const Main = () => {
       </section>
 
       <section className='flex justify-center'>
-        <div className='container'>
-          <div className='flex-col items-center text-black p-6'>
-            <div className='basis-1/2'>
-              <h3 className='font-zalando font-normal text-amber-50'>
-                Always open to great collaboration opportunities.
-              </h3>
-            </div>
-            <CircularText
-              text='DROP*ME*A*MESSAGE*'
-              onHover='speedUp'
-              spinDuration={20}
-              className='font-poppins font-light'
-            />
+        <div className='flex-col items-center text-black p-6'>
+          <div className='basis-1/2'>
+            <h3 className='font-zalando font-normal text-amber-50'>
+              Want something custom? Let’s talk about your idea!
+            </h3>
+            <a href='#' className='font-poppins rounded-4xl px-4 py-1.5 border border-white text-amber-50 font-light flex justify-center items-center gap-1 hover:bg-amber-50 hover:text-[#1b1b1b] transition duration-300 ease-in-out'>Reach me out!<RiArrowRightUpLine className='text-2xl' /></a>
           </div>
         </div>
       </section>
