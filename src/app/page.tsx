@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 const Main = () => {
 
   useGSAP(() => {
-    const split = SplitText.create(".split", { type: "words, chars" });
+    const split = SplitText.create('.split', { type: 'words, chars' });
 
     // now animate the characters in a staggered fashion
     gsap.from(split.chars, {
@@ -25,13 +25,13 @@ const Main = () => {
       stagger: 0.05 // 0.05 seconds between each
     });
 
-    gsap.to(".gallery", {
-      clipPath: "inset(0% 0% 0% 0%)", // reveal fully
+    gsap.to('.gallery', {
+      clipPath: 'inset(0% 0% 0% 0%)', // reveal fully
       duration: 1.5,
-      ease: "power2.out",
+      ease: 'power2.out',
       scrollTrigger: {
-        trigger: ".gallery",
-        start: "top center"
+        trigger: '.gallery',
+        start: 'top center'
       }
     });
   }, []);
