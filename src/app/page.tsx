@@ -39,27 +39,26 @@ const Main = () => {
   return (
     <>
       <ReactLenis root />
-      <section className='max-w-full h-screen flex flex-col justify-center items-center'>
+      <section className='max-w-full h-screen flex flex-col justify-center items-center px-4'>
         <div className='max-w-7xl flex flex-col items-start gap-6'>
-          <h1
-            className='font-zalando font-bold perspective-h1 relative z-200 leading-none text-amber-50 split'
-          >
-            Hello,{' '}
-            <span className='inline-block translate-y-3'>
-              <Image
-                className='max-w-32 rounded-2xl shadow-lg'
-                src='/images/portrait.png'
-                alt='Description'
-                width='120'
-                height='120'
-              />
-            </span>
-          </h1>
-          <h1
-            className='font-zalando font-bold perspective-h1 relative z-200 leading-none text-amber-50 split'
-          >
-            I&apos;m Guang Yang
-          </h1>
+          <div className='overflow-hidden py-4'>
+            <h1
+              className='font-zalando font-bold text-6xl sm:text-6xl md:text-7xl lg:text-8xl text-amber-50 split'
+            >
+              Hello,{' '}
+              <span className='inline-block translate-y-3'>
+                <Image
+                  className='max-w-16 sm:max-w-16 lg:max-w-28 rounded-2xl shadow-lg'
+                  src='/images/portrait.png'
+                  alt='Description'
+                  width='120'
+                  height='120'
+                />
+              </span>
+              <br />
+              I&apos;m Guang Yang
+            </h1>
+          </div>
           <p className='font-poppins font-light text-amber-50 max-w-2xl'>
             I&apos;m a Front-end Web Developer and UI/UX Designer from Selangor,
             Malaysia. Available for work.
@@ -78,33 +77,59 @@ const Main = () => {
             <p className='font-poppins font-light text-amber-50 max-w-2xl'>I build things mostly with these — but I love learning new ones.</p>
           </div>
 
-          <div className='flex basis-1/2 gap-6'>
+          <div className='flex flex-col basis-1/2 gap-6'>
             <div className='flex flex-wrap flex-col gap-4'>
-              <h3 className='font-zalando text-amber-50 text-2xl pb-2 [writing-mode:vertical-lr] [text-orientation:mixed]'>Tech Stack</h3>
-              <ul className='flex gap-1 flex-wrap'>
-                <li className='tags'>HTML</li>
-                <li className='tags'>CSS</li>
-                <li className='tags'>JavaScript</li>
-                <li className='tags'>React</li>
-                <li className='tags'>NextJS</li>
-                <li className='tags'>TailwindCSS</li>
-                <li className='tags'>GSAP</li>
-                <li className='tags'>Motion</li>
-              </ul>
+              <h3 className='font-zalando text-amber-50 text-2xl pb-2'>Tech Stack</h3>
+
+              <div className="wrapper fadeout-horizontal">
+                <div className="marquee-text">
+                  <ul className="marquee-text-track font-poppins">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>TailwindCSS</li>
+                    <li>React</li>
+                    <li>NextJS</li>
+                    <li>GSAP</li>
+                    <li>Motion</li>
+                    <li aria-hidden="true">HTML</li>
+                    <li aria-hidden="true">CSS</li>
+                    <li aria-hidden="true">JavaScript</li>
+                    <li aria-hidden="true">TailwindCSS</li>
+                    <li aria-hidden="true">React</li>
+                    <li aria-hidden="true">NextJS</li>
+                    <li aria-hidden="true">GSAP</li>
+                    <li aria-hidden="true">Motion</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
-            <div className='flex flex-wrap flex-col gap-3'>
-              <h3 className='font-zalando text-amber-50 text-2xl pb-2 [writing-mode:vertical-lr] [text-orientation:mixed]'>Other Tools</h3>
-              <ul className='flex gap-1 flex-wrap'>
-                <li className='tags'>Figma</li>
-                <li className='tags'>Adobe XD</li>
-                <li className='tags'>Adobe Photoshop</li>
-                <li className='tags'>Adobe Illustratorp</li>
-                <li className='tags'>Framer</li>
-                <li className='tags'>Shopify</li>
-                <li className='tags'>WordPress</li>
-                <li className='tags'>Webflow</li>
-              </ul>
+            <div className='flex flex-wrap flex-col gap-4'>
+              <h3 className='font-zalando text-amber-50 text-2xl pb-2'>Other Tools</h3>
+
+              <div className="wrapper fadeout-horizontal">
+                <div className="marquee-text">
+                  <ul className="marquee-text-track font-poppins">
+                    <li>Figma</li>
+                    <li>Adobe XD</li>
+                    <li>Adobe Photoshop</li>
+                    <li>Adobe Illustrator</li>
+                    <li>Framer</li>
+                    <li>Shopify</li>
+                    <li>WordPress</li>
+                    <li>Webflow</li>
+                    <li aria-hidden="true">Figma</li>
+                    <li aria-hidden="true">Adobe XD</li>
+                    <li aria-hidden="true">Adobe Photoshop</li>
+                    <li aria-hidden="true">Adobe Illustrator</li>
+                    <li aria-hidden="true">Framer</li>
+                    <li aria-hidden="true">Shopify</li>
+                    <li aria-hidden="true">WordPress</li>
+                    <li aria-hidden="true">Webflow</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

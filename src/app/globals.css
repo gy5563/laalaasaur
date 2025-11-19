@@ -21,18 +21,6 @@ body {
   cursor: none;
 }
 
-h1 {
-  font-size: 6rem;
-}
-
-h2 {
-  font-size: 3.2rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -130,6 +118,44 @@ h3 {
   /* fully clipped from top */
 }
 
-.split {
-  overflow: hidden;
+/* Infinite Marquee Animation */
+.marquee-text {
+  overflow: clip;
+}
+
+.marquee-text-track {
+  display: flex;
+  padding-left: 2rem;
+  gap: 2rem;
+  width: max-content;
+  animation: marquee-move-text var(--speed, 10s) linear infinite var(--direction, forwards);
+}
+
+.marquee-text p {
+  border: 1px solid white;
+  background-color: #141414;
+  border-radius: 999px;
+  padding: 1rem 2.5rem;
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* This wrapper div is only there so we know for sure we have enough text to fill your screen.
+   If you want to have this marquee loop on devices with a very large width, you simply need to add more text.*/
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.fadeout-horizontal {
+  mask-image: linear-gradient(to right,
+      transparent,
+      black 5rem,
+      black calc(100% - 5rem),
+      transparent);
 }
