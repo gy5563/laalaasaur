@@ -81,9 +81,9 @@ const Main = () => {
             <div className='flex flex-wrap flex-col gap-4'>
               <h3 className='font-zalando text-amber-50 text-2xl pb-2'>Tech Stack</h3>
 
-              <div className="wrapper fadeout-horizontal">
-                <div className="marquee-text">
-                  <ul className="marquee-text-track font-poppins">
+              <div className='wrapper fadeout-horizontal'>
+                <div className='marquee-text'>
+                  <ul className='marquee-text-track font-poppins'>
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
@@ -92,14 +92,14 @@ const Main = () => {
                     <li>NextJS</li>
                     <li>GSAP</li>
                     <li>Motion</li>
-                    <li aria-hidden="true">HTML</li>
-                    <li aria-hidden="true">CSS</li>
-                    <li aria-hidden="true">JavaScript</li>
-                    <li aria-hidden="true">TailwindCSS</li>
-                    <li aria-hidden="true">React</li>
-                    <li aria-hidden="true">NextJS</li>
-                    <li aria-hidden="true">GSAP</li>
-                    <li aria-hidden="true">Motion</li>
+                    <li aria-hidden='true'>HTML</li>
+                    <li aria-hidden='true'>CSS</li>
+                    <li aria-hidden='true'>JavaScript</li>
+                    <li aria-hidden='true'>TailwindCSS</li>
+                    <li aria-hidden='true'>React</li>
+                    <li aria-hidden='true'>NextJS</li>
+                    <li aria-hidden='true'>GSAP</li>
+                    <li aria-hidden='true'>Motion</li>
                   </ul>
                 </div>
               </div>
@@ -108,9 +108,9 @@ const Main = () => {
             <div className='flex flex-wrap flex-col gap-4'>
               <h3 className='font-zalando text-amber-50 text-2xl pb-2'>Other Tools</h3>
 
-              <div className="wrapper fadeout-horizontal">
-                <div className="marquee-text">
-                  <ul className="marquee-text-track font-poppins">
+              <div className='wrapper fadeout-horizontal'>
+                <div className='marquee-text'>
+                  <ul className='marquee-text-track font-poppins'>
                     <li>Figma</li>
                     <li>Adobe XD</li>
                     <li>Adobe Photoshop</li>
@@ -119,14 +119,14 @@ const Main = () => {
                     <li>Shopify</li>
                     <li>WordPress</li>
                     <li>Webflow</li>
-                    <li aria-hidden="true">Figma</li>
-                    <li aria-hidden="true">Adobe XD</li>
-                    <li aria-hidden="true">Adobe Photoshop</li>
-                    <li aria-hidden="true">Adobe Illustrator</li>
-                    <li aria-hidden="true">Framer</li>
-                    <li aria-hidden="true">Shopify</li>
-                    <li aria-hidden="true">WordPress</li>
-                    <li aria-hidden="true">Webflow</li>
+                    <li aria-hidden='true'>Figma</li>
+                    <li aria-hidden='true'>Adobe XD</li>
+                    <li aria-hidden='true'>Adobe Photoshop</li>
+                    <li aria-hidden='true'>Adobe Illustrator</li>
+                    <li aria-hidden='true'>Framer</li>
+                    <li aria-hidden='true'>Shopify</li>
+                    <li aria-hidden='true'>WordPress</li>
+                    <li aria-hidden='true'>Webflow</li>
                   </ul>
                 </div>
               </div>
