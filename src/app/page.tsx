@@ -70,70 +70,68 @@ const Main = () => {
         </div>
       </section>
 
-      <section className='container flex justify-center max-w-full pb-30'>
-        <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row justify-between w-full'>
-          <div className='flex flex-col gap-3'>
-            <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Skills</span>
-            <h2 className='font-zalando font-bold text-amber-50 leading-tight max-w-2xl'>
-              All those technologies I use
-            </h2>
-            <p className='font-poppins font-light text-amber-50 max-w-2xl'>
-              I build things mostly with these — but I love learning new ones.
-            </p>
-          </div>
+      <section className='container flex flex-col md:flex-col lg:flex-row justify-between max-w-full pb-30'>
+        <div className='flex flex-col gap-6 basis-1/2'>
+          <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Skills</span>
+          <h2 className='font-zalando font-bold text-amber-50 leading-tight max-w-2xl text-4xl md:text-5xl lg:text-6xl'>
+            All the technologies I use
+          </h2>
+          <p className='font-poppins font-light text-amber-50 max-w-2xl'>
+            I build things mostly with these — but I love learning new ones.
+          </p>
+        </div>
 
-          <div className='flex flex-col gap-6'>
-            <div className='flex flex-wrap flex-col gap-4'>
-              <h3 className='font-zalando text-amber-50 text-2xl pb-2'>Tech Stack</h3>
+        <div className='flex flex-col gap-12 justify-center basis-1/2'>
+          <div className='flex flex-wrap flex-col gap-4'>
+            <h3 className='font-zalando font-bold text-amber-50 text-2xl pb-2'>Tech Stack</h3>
 
-              <div className='wrapper fadeout-horizontal max-w-2xs sm:max-w-2xs lg:max-w-3xl'>
-                <div className='marquee-text'>
-                  <ul className='marquee-text-track font-poppins'>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>TailwindCSS</li>
-                    <li>React</li>
-                    <li>NextJS</li>
-                    <li>GSAP</li>
-                    <li>Motion</li>
-                    <li aria-hidden='true'>HTML</li>
-                    <li aria-hidden='true'>CSS</li>
-                    <li aria-hidden='true'>JavaScript</li>
-                    <li aria-hidden='true'>TailwindCSS</li>
-                    <li aria-hidden='true'>React</li>
-                    <li aria-hidden='true'>NextJS</li>
-                    <li aria-hidden='true'>GSAP</li>
-                    <li aria-hidden='true'>Motion</li>
-                  </ul>
-                </div>
+            <div className='wrapper fadeout-horizontal max-w-2xs sm:max-w-2xs lg:max-w-3xl'>
+              <div className='marquee-text'>
+                <ul className='marquee-text-track font-poppins'>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>TailwindCSS</li>
+                  <li>React</li>
+                  <li>NextJS</li>
+                  <li>GSAP</li>
+                  <li>Motion</li>
+                  <li aria-hidden='true'>HTML</li>
+                  <li aria-hidden='true'>CSS</li>
+                  <li aria-hidden='true'>JavaScript</li>
+                  <li aria-hidden='true'>TailwindCSS</li>
+                  <li aria-hidden='true'>React</li>
+                  <li aria-hidden='true'>NextJS</li>
+                  <li aria-hidden='true'>GSAP</li>
+                  <li aria-hidden='true'>Motion</li>
+                </ul>
               </div>
             </div>
+          </div>
 
-            <div className='flex flex-wrap flex-col gap-4'>
-              <h3 className='font-zalando text-amber-50 text-2xl pb-2'>Other Tools</h3>
+          <div className='flex flex-wrap flex-col gap-4'>
+            <h3 className='font-zalando font-bold text-amber-50 text-2xl pb-2'>Other Tools</h3>
 
-              <div className='wrapper fadeout-horizontal max-w-2xs sm:max-w-2xs lg:max-w-3xl'>
-                <div className='marquee-text'>
-                  <ul className='marquee-text-track font-poppins'>
-                    <li>Figma</li>
-                    <li>Adobe XD</li>
-                    <li>Adobe Photoshop</li>
-                    <li>Adobe Illustrator</li>
-                    <li>Framer</li>
-                    <li>Shopify</li>
-                    <li>WordPress</li>
-                    <li>Webflow</li>
-                    <li aria-hidden='true'>Figma</li>
-                    <li aria-hidden='true'>Adobe XD</li>
-                    <li aria-hidden='true'>Adobe Photoshop</li>
-                    <li aria-hidden='true'>Adobe Illustrator</li>
-                    <li aria-hidden='true'>Framer</li>
-                    <li aria-hidden='true'>Shopify</li>
-                    <li aria-hidden='true'>WordPress</li>
-                    <li aria-hidden='true'>Webflow</li>
-                  </ul>
-                </div>
+            <div className='wrapper fadeout-horizontal max-w-2xs sm:max-w-2xs lg:max-w-3xl'>
+              <div className='marquee-text'>
+                <ul className='marquee-text-track font-poppins'>
+                  <li>Figma</li>
+                  <li>Adobe XD</li>
+                  <li>Adobe Photoshop</li>
+                  <li>Adobe Illustrator</li>
+                  <li>Framer</li>
+                  <li>Shopify</li>
+                  <li>WordPress</li>
+                  <li>Webflow</li>
+                  <li aria-hidden='true'>Figma</li>
+                  <li aria-hidden='true'>Adobe XD</li>
+                  <li aria-hidden='true'>Adobe Photoshop</li>
+                  <li aria-hidden='true'>Adobe Illustrator</li>
+                  <li aria-hidden='true'>Framer</li>
+                  <li aria-hidden='true'>Shopify</li>
+                  <li aria-hidden='true'>WordPress</li>
+                  <li aria-hidden='true'>Webflow</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -144,7 +142,7 @@ const Main = () => {
         <div className='flex flex-col gap-12'>
           <div className='max-w-3xl flex flex-col gap-6'>
             <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Services</span>
-            <h2 className='font-zalando font-bold text-amber-50 leading-tight'>
+            <h2 className='font-zalando font-bold text-amber-50 leading-tight text-4xl md:text-5xl lg:text-6xl'>
               Explore my comprehensive service offerings
             </h2>
             <p className='font-poppins font-light text-amber-50 max-w-2xl'>
@@ -196,7 +194,9 @@ const Main = () => {
         <div className='flex flex-col gap-12'>
           <div className='max-w-3xl flex flex-col gap-6'>
             <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Projects</span>
-            <h2 className='font-zalando font-bold text-amber-50 leading-tight'>Featured works</h2>
+            <h2 className='font-zalando font-bold text-amber-50 leading-tight text-4xl md:text-5xl lg:text-6xl'>
+              Featured works
+            </h2>
             <p className='font-poppins font-light text-amber-50 max-w-2xl'>
               A selection of projects I’ve designed and built with care and precision.
             </p>
