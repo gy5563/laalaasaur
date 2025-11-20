@@ -147,7 +147,6 @@ body {
 /* This wrapper div is only there so we know for sure we have enough text to fill your screen.
    If you want to have this marquee loop on devices with a very large width, you simply need to add more text.*/
 .wrapper {
-  max-width: 600px;
   margin: 0 auto;
   color: #fff;
 }
