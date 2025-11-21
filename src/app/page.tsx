@@ -70,7 +70,7 @@ const Main = () => {
         </div>
       </section>
 
-      <section className='container flex flex-col md:flex-col lg:flex-row justify-between max-w-full pb-30'>
+      <section className='container flex flex-col md:flex-row lg:flex-row justify-between max-w-full pb-30'>
         <div className='flex flex-col gap-6 basis-1/2'>
           <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Skills</span>
           <h2 className='font-zalando font-bold text-amber-50 leading-tight max-w-2xl text-4xl md:text-5xl lg:text-6xl'>
