@@ -3,6 +3,8 @@ import { ReactNode } from 'react';
 import CustomCursor from './components/cursor';
 import Navbar from './components/navbar';
 import ScrollToTop from './components/scrolltotop';
+import Background from './components/background';
+import Preloader from './components/preloader';
 
 export const metadata = {
     title: 'Laalaa Portfolio',
@@ -11,15 +13,17 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
     return (
-        <html lang='en'>
-            <body>
-                <Navbar />
-                {children}
-                <CustomCursor />
-                <div>
-                    <ScrollToTop />
-                </div>
-            </body>
-        </html>
+      <html lang='en'>
+        <body>
+          <Preloader />
+          <Background />
+          <Navbar />
+          {children}
+          <CustomCursor />
+          <div>
+            <ScrollToTop />
+          </div>
+        </body>
+      </html>
     );
 }
