@@ -128,7 +128,7 @@ const Menu = ({ isOpen, closeMenu }: MenuProps) => {
             href='mailto:hello@laalaa.com'
             className='font-zalando text-2xl text-amber-50 hover:underline'
           >
-            hello@laalaa.com
+            yang6405@gmail.com
           </a>
           <div className='flex gap-4 font-poppins text-xs text-amber-50/40 mt-2'>
             <a href='#' className='hover:text-white'>

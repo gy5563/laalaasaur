@@ -61,7 +61,7 @@ const Main = () => {
             for work.
           </p>
           <a
-            href='#'
+            href='mailto:yang6405@gmail.com'
             className='font-poppins rounded-4xl px-4 py-1.5 border border-white text-amber-50 font-light flex justify-center items-center gap-1 hover:bg-amber-50 hover:text-[#1b1b1b] transition duration-300 ease-in-out'
           >
             Reach me out!
@@ -204,13 +204,18 @@ const Main = () => {
 
           <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12'>
             <div className='flex flex-col gap-3'>
-              <Image
-                className='shadow-lg w-full aspect-video object-cover gallery'
-                src='/images/showcase-01.jpg'
-                alt='Description'
-                width={800}
-                height={800}
-              />
+              <a
+                href='https://timeless-vacation.com/'
+                className='hover:scale-90 transition duration-300 ease-in-out'
+              >
+                <Image
+                  className='shadow-lg w-full aspect-video object-cover gallery'
+                  src='/images/showcase-01.jpg'
+                  alt='Description'
+                  width={800}
+                  height={800}
+                />
+              </a>
               <div className='flex justify-between items-center'>
                 <h3 className='font-zalando text-amber-50 text-2xl'>Timeless Vacation</h3>
                 <RiArrowRightUpLine className='text-4xl text-amber-50' />
@@ -226,13 +231,57 @@ const Main = () => {
             </div>
 
             <div className='flex flex-col gap-3'>
-              <Image
-                className='shadow-lg w-full aspect-video object-cover gallery'
-                src='/images/showcase-02.jpg'
-                alt='Description'
-                width={800}
-                height={800}
-              />
+              <a href='https://ruma-home.com/' className='hover:scale-90 transition duration-300 ease-in-out'>
+                <Image
+                  className='shadow-lg w-full aspect-video object-cover gallery'
+                  src='/images/showcase-06.jpg'
+                  alt='Description'
+                  width={800}
+                  height={800}
+                />
+              </a>
+              <div className='flex justify-between items-center'>
+                <h3 className='font-zalando text-amber-50 text-2xl'>Ruma</h3>
+                <RiArrowRightUpLine className='text-4xl text-amber-50' />
+              </div>
+              <div className='flex'>
+                <a href='https://ruma-home.com/' className='font-poppins font-light text-amber-50 '>
+                  https://ruma-home.com/
+                </a>
+              </div>
+            </div>
+
+            <div className='flex flex-col gap-3'>
+              <a href='https://chooi.com.my/' className='hover:scale-90 transition duration-300 ease-in-out'>
+                <Image
+                  className='shadow-lg w-full aspect-video object-cover gallery'
+                  src='/images/showcase-03.jpg'
+                  alt='Description'
+                  width={800}
+                  height={800}
+                />
+              </a>
+              <div className='flex justify-between items-center'>
+                <h3 className='font-zalando text-amber-50 text-2xl'>Chooi & Company</h3>
+                <RiArrowRightUpLine className='text-4xl text-amber-50' />
+              </div>
+              <div className='flex'>
+                <a href='https://chooi.com.my/' className='font-poppins font-light text-amber-50 '>
+                  https://chooi.com.my/
+                </a>
+              </div>
+            </div>
+
+            <div className='flex flex-col gap-3'>
+              <a href='https://otterbarista.com/' className='hover:scale-90 transition duration-300 ease-in-out'>
+                <Image
+                  className='shadow-lg w-full aspect-video object-cover gallery'
+                  src='/images/showcase-02.jpg'
+                  alt='Description'
+                  width={800}
+                  height={800}
+                />
+              </a>
               <div className='flex justify-between items-center'>
                 <h3 className='font-zalando text-amber-50 text-2xl'>Otter Barista</h3>
                 <RiArrowRightUpLine className='text-4xl text-amber-50' />
