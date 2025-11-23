@@ -206,6 +206,8 @@ const Main = () => {
             <div className='flex flex-col gap-3'>
               <a
                 href='https://timeless-vacation.com/'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='hover:scale-90 transition duration-300 ease-in-out'
               >
                 <Image
@@ -223,6 +225,8 @@ const Main = () => {
               <div className='flex'>
                 <a
                   href='https://timeless-vacation.com/'
+                  target='_blank'
+                  rel='noopener noreferrer'
                   className='font-poppins font-light text-amber-50 '
                 >
                   https://timeless-vacation.com/
@@ -231,7 +235,12 @@ const Main = () => {
             </div>
 
             <div className='flex flex-col gap-3'>
-              <a href='https://ruma-home.com/' className='hover:scale-90 transition duration-300 ease-in-out'>
+              <a
+                href='https://ruma-home.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='hover:scale-90 transition duration-300 ease-in-out'
+              >
                 <Image
                   className='shadow-lg w-full aspect-video object-cover gallery'
                   src='/images/showcase-06.jpg'
@@ -245,14 +254,24 @@ const Main = () => {
                 <RiArrowRightUpLine className='text-4xl text-amber-50' />
               </div>
               <div className='flex'>
-                <a href='https://ruma-home.com/' className='font-poppins font-light text-amber-50 '>
+                <a
+                  href='https://ruma-home.com/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='font-poppins font-light text-amber-50 '
+                >
                   https://ruma-home.com/
                 </a>
               </div>
             </div>
 
             <div className='flex flex-col gap-3'>
-              <a href='https://chooi.com.my/' className='hover:scale-90 transition duration-300 ease-in-out'>
+              <a
+                href='https://chooi.com.my/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='hover:scale-90 transition duration-300 ease-in-out'
+              >
                 <Image
                   className='shadow-lg w-full aspect-video object-cover gallery'
                   src='/images/showcase-03.jpg'
@@ -266,14 +285,24 @@ const Main = () => {
                 <RiArrowRightUpLine className='text-4xl text-amber-50' />
               </div>
               <div className='flex'>
-                <a href='https://chooi.com.my/' className='font-poppins font-light text-amber-50 '>
+                <a
+                  href='https://chooi.com.my/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='font-poppins font-light text-amber-50 '
+                >
                   https://chooi.com.my/
                 </a>
               </div>
             </div>
 
             <div className='flex flex-col gap-3'>
-              <a href='https://otterbarista.com/' className='hover:scale-90 transition duration-300 ease-in-out'>
+              <a
+                href='https://otterbarista.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='hover:scale-90 transition duration-300 ease-in-out'
+              >
                 <Image
                   className='shadow-lg w-full aspect-video object-cover gallery'
                   src='/images/showcase-02.jpg'
@@ -290,6 +319,7 @@ const Main = () => {
                 <a
                   href='https://otterbarista.com/'
                   target='_blank'
+                  rel='noopener noreferrer'
                   className='font-poppins font-light text-amber-50'
                 >
                   https://otterbarista.com/
