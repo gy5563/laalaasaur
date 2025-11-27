@@ -73,7 +73,7 @@ const Main = () => {
       <section className='container flex flex-col md:flex-row lg:flex-row justify-between max-w-full pb-30'>
         <div className='flex flex-col gap-6 basis-1/2'>
           <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Skills</span>
-          <h2 className='font-zalando font-bold text-amber-50 leading-tight max-w-2xl text-4xl md:text-5xl lg:text-6xl'>
+          <h2 className='font-zalando font-bold text-stroke leading-tight max-w-2xl text-4xl md:text-5xl lg:text-6xl'>
             All the technologies I use
           </h2>
           <p className='font-poppins font-light text-amber-50 max-w-2xl'>
@@ -142,7 +142,7 @@ const Main = () => {
         <div className='flex flex-col gap-12'>
           <div className='max-w-3xl flex flex-col gap-6'>
             <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Services</span>
-            <h2 className='font-zalando font-bold text-amber-50 leading-tight text-4xl md:text-5xl lg:text-6xl'>
+            <h2 className='font-zalando font-bold text-stroke leading-tight text-4xl md:text-5xl lg:text-6xl'>
               Explore my comprehensive service offerings
             </h2>
             <p className='font-poppins font-light text-amber-50 max-w-2xl'>
@@ -194,7 +194,7 @@ const Main = () => {
         <div className='flex flex-col gap-12'>
           <div className='max-w-3xl flex flex-col gap-6'>
             <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Projects</span>
-            <h2 className='font-zalando font-bold text-amber-50 leading-tight text-4xl md:text-5xl lg:text-6xl'>
+            <h2 className='font-zalando font-bold text-stroke leading-tight text-4xl md:text-5xl lg:text-6xl'>
               Featured works
             </h2>
             <p className='font-poppins font-light text-amber-50 max-w-2xl'>
@@ -208,7 +208,7 @@ const Main = () => {
                 href='https://timeless-vacation.com/'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='hover:scale-90 transition duration-300 ease-in-out'
+                className='hover:scale-90 transition duration-300 ease-in-out links'
               >
                 <Image
                   className='shadow-lg w-full aspect-video object-cover gallery'
@@ -227,7 +227,7 @@ const Main = () => {
                   href='https://timeless-vacation.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='font-poppins font-light text-amber-50 '
+                  className='font-poppins font-light text-amber-50 links'
                 >
                   https://timeless-vacation.com/
                 </a>
@@ -239,7 +239,7 @@ const Main = () => {
                 href='https://ruma-home.com/'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='hover:scale-90 transition duration-300 ease-in-out'
+                className='hover:scale-90 transition duration-300 ease-in-out links'
               >
                 <Image
                   className='shadow-lg w-full aspect-video object-cover gallery'
@@ -258,7 +258,7 @@ const Main = () => {
                   href='https://ruma-home.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='font-poppins font-light text-amber-50 '
+                  className='font-poppins font-light text-amber-50 links'
                 >
                   https://ruma-home.com/
                 </a>
@@ -270,7 +270,7 @@ const Main = () => {
                 href='https://chooi.com.my/'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='hover:scale-90 transition duration-300 ease-in-out'
+                className='hover:scale-90 transition duration-300 ease-in-out links'
               >
                 <Image
                   className='shadow-lg w-full aspect-video object-cover gallery'
@@ -289,7 +289,7 @@ const Main = () => {
                   href='https://chooi.com.my/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='font-poppins font-light text-amber-50 '
+                  className='font-poppins font-light text-amber-50 links'
                 >
                   https://chooi.com.my/
                 </a>
@@ -301,7 +301,7 @@ const Main = () => {
                 href='https://otterbarista.com/'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='hover:scale-90 transition duration-300 ease-in-out'
+                className='hover:scale-90 transition duration-300 ease-in-out links'
               >
                 <Image
                   className='shadow-lg w-full aspect-video object-cover gallery'
@@ -320,7 +320,7 @@ const Main = () => {
                   href='https://otterbarista.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='font-poppins font-light text-amber-50'
+                  className='font-poppins font-light text-amber-50 links'
                 >
                   https://otterbarista.com/
                 </a>
@@ -330,20 +330,34 @@ const Main = () => {
         </div>
       </section>
 
-      <section className='flex justify-center'>
-        <div className='flex-col items-center text-black p-6'>
-          <div className='basis-1/2'>
-            <h3 className='font-zalando font-normal text-amber-50'>
-              Want something custom? Let’s talk about your idea!
-            </h3>
+      <section
+        id='contact'
+        className='min-h-[50vh] flex flex-col justify-center items-center px-4 pt-20'
+      >
+        <div className='flex flex-col items-center gap-8'>
+          <span className='uppercase font-zalando text-amber-50/50 tracking-widest'>
+            What&apos;s Next?
+          </span>
+          <h2 className='font-zalando text-6xl md:text-8xl text-center text-amber-50 leading-none'>
+            Let&apos;s work <br /> together.
+          </h2>
+          <div className='relative group'>
             <a
-              href='#'
-              className='font-poppins rounded-4xl px-4 py-1.5 border border-white text-amber-50 font-light flex justify-center items-center gap-1 hover:bg-amber-50 hover:text-[#1b1b1b] transition duration-300 ease-in-out'
+              href='mailto:yang6405@gmail.com'
+              className='font-poppins text-xl md:text-2xl text-amber-50 border-b border-amber-50/30 pb-1 group-hover:border-amber-50 transition-all duration-300 links'
             >
-              Reach me out!
-              <RiArrowRightUpLine className='text-2xl' />
+              yang6405@gmail.com
             </a>
+            {/* Animated underline */}
+            <div className='absolute bottom-0 left-0 w-full h-[1px] bg-amber-50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left'></div>
           </div>
+        </div>
+        <div className='w-full border-t border-white/10 mt-20 py-8 flex justify-between text-amber-50/40 font-poppins text-sm'>
+          <span>© 2024 Guang Yang</span>
+          <span>
+            Local time:{' '}
+            {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })} KL
+          </span>
         </div>
       </section>
     </>

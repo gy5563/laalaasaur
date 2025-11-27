@@ -111,7 +111,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  clip-path: inset(0% 0% 100% 0%);
+  clip-path: inset(0% 0% 99.99% 0%);
   /* fully clipped from top */
 }
 
@@ -154,4 +154,13 @@ body {
       black 5rem,
       black calc(100% - 5rem),
       transparent);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 251, 235, 0.5); /* Amber-50 with opacity */
+  color: transparent;
+  transition: all 0.3s ease;
+}
+.text-stroke:hover {
+  color: #fffbeb; /* Fill on hover */
 }
