@@ -9,6 +9,8 @@ import { ReactLenis } from 'lenis/react';
 import { RiArrowRightUpLine } from 'react-icons/ri';
 import { RiAsterisk } from 'react-icons/ri';
 import Image from 'next/image';
+import Link from 'next/link';
+import { projects } from '@/data/projects';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -191,6 +193,20 @@ const Main = () => {
       </section>
 
       <section className='container flex justify-center max-w-full pb-30'>
+        <div className='mx-auto max-w-3xl py-16 space-y-12'>
+          <h1 className='text-4xl font-bold mb-8'>Projects</h1>
+
+          {projects.map((p) => (
+            <Link key={p.slug} href={`/projects/${p.slug}`} className='block group'>
+              <img
+                src={p.coverImage}
+                className='rounded-xl mb-4 transition-transform group-hover:scale-[1.02]'
+              />
+              <h2 className='text-2xl font-semibold'>{p.title}</h2>
+              <p className='text-gray-500'>{p.category}</p>
+            </Link>
+          ))}
+        </div>
         <div className='flex flex-col gap-12'>
           <div className='max-w-3xl flex flex-col gap-6'>
             <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Projects</span>
