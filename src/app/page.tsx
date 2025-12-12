@@ -193,20 +193,6 @@ const Main = () => {
       </section>
 
       <section className='container flex justify-center max-w-full pb-30'>
-        <div className='mx-auto max-w-3xl py-16 space-y-12'>
-          <h1 className='text-4xl font-bold mb-8'>Projects</h1>
-
-          {projects.map((p) => (
-            <Link key={p.slug} href={`/projects/${p.slug}`} className='block group'>
-              <img
-                src={p.coverImage}
-                className='rounded-xl mb-4 transition-transform group-hover:scale-[1.02]'
-              />
-              <h2 className='text-2xl font-semibold'>{p.title}</h2>
-              <p className='text-gray-500'>{p.category}</p>
-            </Link>
-          ))}
-        </div>
         <div className='flex flex-col gap-12'>
           <div className='max-w-3xl flex flex-col gap-6'>
             <span className='uppercase font-zalando text-amber-50 text-[1rem]'>Projects</span>
@@ -217,131 +203,23 @@ const Main = () => {
               A selection of projects I’ve designed and built with care and precision.
             </p>
           </div>
-
           <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12'>
-            <div className='flex flex-col gap-3'>
-              <a
-                href='https://timeless-vacation.com/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='hover:scale-90 transition duration-300 ease-in-out links'
-              >
+            {projects.map((p) => (
+              <Link key={p.slug} href={`/projects/${p.slug}`} className='block group links'>
                 <Image
-                  className='shadow-lg w-full aspect-video object-cover gallery'
-                  src='/images/showcase-01.jpg'
-                  alt='Description'
+                  src={p.coverImage}
+                  className='mb-4 transition-transform group-hover:scale-[0.98]'
+                  alt={p.title}
                   width={800}
                   height={800}
                 />
-              </a>
-              <div className='flex justify-between items-center'>
-                <h3 className='font-zalando text-amber-50 text-2xl'>Timeless Vacation</h3>
-                <RiArrowRightUpLine className='text-4xl text-amber-50' />
-              </div>
-              <div className='flex'>
-                <a
-                  href='https://timeless-vacation.com/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='font-poppins font-light text-amber-50 links'
-                >
-                  https://timeless-vacation.com/
-                </a>
-              </div>
-            </div>
-
-            <div className='flex flex-col gap-3'>
-              <a
-                href='https://ruma-home.com/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='hover:scale-90 transition duration-300 ease-in-out links'
-              >
-                <Image
-                  className='shadow-lg w-full aspect-video object-cover gallery'
-                  src='/images/showcase-06.jpg'
-                  alt='Description'
-                  width={800}
-                  height={800}
-                />
-              </a>
-              <div className='flex justify-between items-center'>
-                <h3 className='font-zalando text-amber-50 text-2xl'>Ruma</h3>
-                <RiArrowRightUpLine className='text-4xl text-amber-50' />
-              </div>
-              <div className='flex'>
-                <a
-                  href='https://ruma-home.com/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='font-poppins font-light text-amber-50 links'
-                >
-                  https://ruma-home.com/
-                </a>
-              </div>
-            </div>
-
-            <div className='flex flex-col gap-3'>
-              <a
-                href='https://chooi.com.my/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='hover:scale-90 transition duration-300 ease-in-out links'
-              >
-                <Image
-                  className='shadow-lg w-full aspect-video object-cover gallery'
-                  src='/images/showcase-03.jpg'
-                  alt='Description'
-                  width={800}
-                  height={800}
-                />
-              </a>
-              <div className='flex justify-between items-center'>
-                <h3 className='font-zalando text-amber-50 text-2xl'>Chooi & Company</h3>
-                <RiArrowRightUpLine className='text-4xl text-amber-50' />
-              </div>
-              <div className='flex'>
-                <a
-                  href='https://chooi.com.my/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='font-poppins font-light text-amber-50 links'
-                >
-                  https://chooi.com.my/
-                </a>
-              </div>
-            </div>
-
-            <div className='flex flex-col gap-3'>
-              <a
-                href='https://otterbarista.com/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='hover:scale-90 transition duration-300 ease-in-out links'
-              >
-                <Image
-                  className='shadow-lg w-full aspect-video object-cover gallery'
-                  src='/images/showcase-02.jpg'
-                  alt='Description'
-                  width={800}
-                  height={800}
-                />
-              </a>
-              <div className='flex justify-between items-center'>
-                <h3 className='font-zalando text-amber-50 text-2xl'>Otter Barista</h3>
-                <RiArrowRightUpLine className='text-4xl text-amber-50' />
-              </div>
-              <div className='flex'>
-                <a
-                  href='https://otterbarista.com/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='font-poppins font-light text-amber-50 links'
-                >
-                  https://otterbarista.com/
-                </a>
-              </div>
-            </div>
+                <div className='flex justify-between items-center'>
+                  <h3 className='font-zalando text-amber-50 text-2xl'>{p.title}</h3>
+                  <RiArrowRightUpLine className='text-4xl text-amber-50' />
+                </div>
+                <p className='font-poppins font-light text-amber-50'>{p.category}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -365,7 +243,7 @@ const Main = () => {
               yang6405@gmail.com
             </a>
             {/* Animated underline */}
-            <div className='absolute bottom-0 left-0 w-full h-[1px] bg-amber-50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left'></div>
+            <div className='absolute bottom-0 left-0 w-full h-px bg-amber-50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left'></div>
           </div>
         </div>
         <div className='w-full border-t border-white/10 mt-20 py-8 flex justify-between text-amber-50/40 font-poppins text-sm'>
