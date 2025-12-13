@@ -77,7 +77,7 @@ const Menu = ({ isOpen, closeMenu }: MenuProps) => {
   }, [isOpen]);
 
   return (
-    <div ref={containerRef} className='relative z-[9999]'>
+    <div ref={containerRef} className='relative z-9999'>
       {/* Dark Overlay */}
       <div
         ref={overlayRef}
