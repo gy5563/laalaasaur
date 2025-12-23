@@ -7,7 +7,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
 import { ReactLenis } from 'lenis/react';
 import { RiArrowRightUpLine } from 'react-icons/ri';
-import { RiAsterisk } from 'react-icons/ri';
 import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '@/data/projects';

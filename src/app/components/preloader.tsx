@@ -88,7 +88,7 @@ export default function Preloader() {
       {/* Center Section: Big Title (Optional) */}
       <div className='preloader-content flex-1 flex items-center justify-center'>
         <h1 className='font-zalando text-4xl sm:text-6xl md:text-8xl tracking-tighter opacity-20'>
-          LAALAA
+          GUANGYANG
         </h1>
       </div>
 
