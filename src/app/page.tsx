@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
@@ -10,19 +10,23 @@ import { RiArrowRightUpLine } from 'react-icons/ri';
 import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '@/data/projects';
+import Preloader from './components/preloader';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Main = () => {
+  const homeTl = useRef<gsap.core.Timeline | null>(null);
+  const [preloaderFinished, setPreloaderFinished] = useState(false);
+
   useGSAP(() => {
     const split = SplitText.create('.split', { type: 'words, chars' });
 
-    // now animate the characters in a staggered fashion
-    gsap.from(split.chars, {
+    homeTl.current = gsap.timeline({ paused: true }).from(split.chars, {
+      y: 100,
+      opacity: 0,
+      stagger: 0.05,
       duration: 1,
-      y: 100, // animate from 100px below
-      autoAlpha: 0, // fade in from opacity: 0 and visibility: hidden
-      stagger: 0.05, // 0.05 seconds between each
+      ease: 'power4.out',
     });
 
     gsap.to('.gallery', {
@@ -36,9 +40,16 @@ const Main = () => {
     });
   }, []);
 
+  useEffect(() => {
+    if (preloaderFinished) {
+      homeTl.current?.play(0);
+    }
+  }, [preloaderFinished]);
+
   return (
     <>
       <ReactLenis root />
+      <Preloader onFinish={() => setPreloaderFinished(true)} />
       <section className='max-w-full h-screen flex flex-col justify-center items-center px-4'>
         <div className='max-w-7xl flex flex-col items-start gap-6'>
           <div className='overflow-hidden py-4'>

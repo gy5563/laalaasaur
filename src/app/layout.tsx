@@ -4,7 +4,6 @@ import CustomCursor from './components/cursor';
 import Navbar from './components/navbar';
 import ScrollToTop from './components/scrolltotop';
 import Background from './components/background';
-import Preloader from './components/preloader';
 
 export const metadata = {
     title: 'Laalaa Portfolio',
@@ -15,7 +14,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     return (
       <html lang='en'>
         <body>
-          <Preloader />
           <Background />
           <Navbar />
           {children}

@@ -26,10 +26,10 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
       <p className='mt-2 font-poppins font-light text-amber-50'>{project.description}</p>
 
       <h3 className='mt-8 font-poppins font-semibold text-amber-50'>Skills and deliverables</h3>
-      <ul className='mt-2 list-none flex'>
+      <ul className='mt-2 list-none flex gap-2'>
         {project.services.map((service) => (
           <li
-            className='border border-amber-50 rounded-full px-4 py-1 mr-2 text-amber-50'
+            className='font-poppins rounded-4xl px-4 py-1.5 border border-white text-amber-50 font-light flex justify-center items-center gap-1 hover:bg-amber-50 hover:text-[#1b1b1b] transition duration-300 ease-in-out'
             key={service}
           >
             {service}

@@ -3,8 +3,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { resolve } from 'path';
 
-export default function Preloader() {
+type Props = {
+  onFinish: () => void;
+};
+
+export default function Preloader({ onFinish }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const counterRef = useRef<HTMLSpanElement>(null);
   const [shouldRender, setShouldRender] = useState(true);
@@ -16,6 +21,7 @@ export default function Preloader() {
       const hasVisited = sessionStorage.getItem('hasVisited');
       if (hasVisited) {
         setShouldRender(false);
+        onFinish();
         return;
       }
 
@@ -24,11 +30,9 @@ export default function Preloader() {
 
       const tl = gsap.timeline({
         onComplete: () => {
-          // Unlock scroll and cleanup
-          document.body.style.overflow = '';
           sessionStorage.setItem('hasVisited', 'true');
-          // Optional: Remove component from DOM after animation
-          gsap.set(containerRef.current, { display: 'none' });
+          document.body.style.overflow = '';
+          onFinish();
         },
       });
 
