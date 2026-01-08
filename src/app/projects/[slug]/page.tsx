@@ -18,7 +18,7 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
         {project.title}
       </h1>
 
-      <p className='font-poppins font-light text-gray-300 text-[0.9rem]'>
+      <p className='font-poppins font-light text-gray-300 text-[0.9rem] pt-2'>
         {project.category} · {project.year}
       </p>
 
