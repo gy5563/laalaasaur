@@ -6,8 +6,8 @@ import ScrollToTop from './components/scrolltotop';
 import Background from './components/background';
 
 export const metadata = {
-    title: 'Laalaa Portfolio',
-    description: 'Welcome to Laalaa\'s portfolio website',
+    title: 'Guang\'s Portfolio',
+    description: 'Welcome to Guang\'s portfolio website',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
