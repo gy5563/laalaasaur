@@ -38,4 +38,15 @@ export const projects = [
     coverImage: '/images/showcase-02.jpg',
     gallery: ['/images/showcase-02.jpg', '/images/showcase-03.jpg'],
   },
+  {
+    slug: 'crypto-converter',
+    title: 'Crypto Converter',
+    category: 'Web Application',
+    year: '2025',
+    description:
+      'A cryptocurrency converter application that allows users to track and convert between various digital currencies in real-time.',
+    services: ['WordPress Development', 'UI/UX Design', 'SEO Optimization'],
+    link: 'https://gy5563.github.io/problem-2/',
+    coverImage: '/images/showcase-07.jpg',
+  },
 ];
