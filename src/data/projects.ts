@@ -45,7 +45,7 @@ export const projects = [
     year: '2025',
     description:
       'A cryptocurrency converter application that allows users to track and convert between various digital currencies in real-time.',
-    services: ['WordPress Development', 'UI/UX Design', 'SEO Optimization'],
+    services: ['JavaScript', 'Tailwind CSS', 'REST API'],
     link: 'https://gy5563.github.io/problem-2/',
     coverImage: '/images/showcase-07.jpg',
   },
